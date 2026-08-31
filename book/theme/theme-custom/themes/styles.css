@@ -90,10 +90,29 @@
     min-width: 0;
 }
 
+.x-post-card .link-card-body {
+    width: 100%;
+}
+
 .link-card-title {
     font-size: 0.94rem;
     font-weight: 700;
     line-height: 1.35;
+}
+
+.link-card-text {
+    font-size: 0.86rem;
+    line-height: 1.55;
+    margin-block-start: 0.45rem;
+}
+
+.link-card-media {
+    border-radius: 0.2rem;
+    display: block;
+    margin: 0.55rem auto 0;
+    max-height: 14rem;
+    object-fit: contain;
+    width: 100%;
 }
 
 .link-card-domain {

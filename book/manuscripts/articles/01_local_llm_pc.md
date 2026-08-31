@@ -22,20 +22,20 @@ profile: |
 
 個人的に試しているローカル LLM 検証機を更新しました。自作 PC 趣味でゲーム用途の他にローカル LLM という目的を持ってしまったため、色々とイジッていたらマルチ GPU 構成になりました。ローカル LLM の個人検証機の構成例を調べてましたが、マルチ GPU の例はあまり見なかったので、記録として残しておきます。
 
-<div class="link-card">
-  <img class="link-card-thumbnail" src="./01_local_llm_pc/x.com.png" alt="x.com のサムネイル">
+<div class="link-card x-post-card">
   <div class="link-card-body">
     <div class="link-card-title">Mitsuharu Emoto（@mitsuharu_e）の投稿 / X</div>
-    <div class="link-card-domain">x.com</div>
+    <div class="link-card-text">ということで、今の検証機はこういう構成になった</div>
+    <img class="link-card-media" src="./01_local_llm_pc/x-post-2068555740013527394.webp" alt="2枚のRadeon GPUを搭載したローカルLLM検証機">
     <div class="link-card-url">https://x.com/mitsuharu_e/status/2068555740013527394</div>
   </div>
 </div>
 
-<div class="link-card">
-  <img class="link-card-thumbnail" src="./01_local_llm_pc/x.com.png" alt="x.com のサムネイル">
+<div class="link-card x-post-card">
   <div class="link-card-body">
     <div class="link-card-title">Mitsuharu Emoto（@mitsuharu_e）の投稿 / X</div>
-    <div class="link-card-domain">x.com</div>
+    <div class="link-card-text">iOSアプリ作りを推論中</div>
+    <img class="link-card-media" src="./01_local_llm_pc/x-post-2073625317911179567.webp" alt="ローカルLLMでiOSアプリを生成している動画のサムネイル">
     <div class="link-card-url">https://x.com/mitsuharu_e/status/2073625317911179567</div>
   </div>
 </div>
