@@ -6,6 +6,10 @@ profile: |
   モバイルアプリ開発者。自作 PC とローカル LLM の検証を趣味にしています。
 ---
 
+<div class="doc-header">
+  <div class="doc-title">Windows + マルチ Radeon GPU 向けに llama.cpp をビルドする</div>
+</div>
+
 # Windows + マルチ Radeon GPU 向けに llama.cpp をビルドする
 
 <aside class="publication-note">

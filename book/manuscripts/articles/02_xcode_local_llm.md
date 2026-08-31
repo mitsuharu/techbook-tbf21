@@ -6,18 +6,11 @@ profile: |
   モバイルアプリ開発者。自作 PC とローカル LLM の検証を趣味にしています。
 ---
 
-<!-- textlint-disable -->
-
-<header>
-
-# 自作 PC で始めるローカル LLM を利用した Xcode のコード自動生成
-
-<div class="author-info">
-江本光晴<BR />
-ゆめみ（アクセンチュア株式会社）
+<div class="doc-header">
+  <div class="doc-title">自作 PC で始めるローカル LLM を利用した Xcode のコード自動生成</div>
 </div>
 
-</header>
+# 自作 PC で始めるローカル LLM を利用した Xcode のコード自動生成
 
 <aside class="publication-note">
   <div class="publication-note-label">転載記事</div>
@@ -25,6 +18,7 @@ profile: |
   <p class="publication-note-url">掲載元：https://github.com/mitsuharu/iosdc-2026-pamphlet/blob/main/manuscripts/index.md</p>
 </aside>
 
+<!-- textlint-disable -->
 
 Xcode 26 から AI 機能が搭載され、Xcode はコード生成ができるようになりました。今や生成 AI は開発に欠かせない存在です。一方で、そのコード生成に利用されるクラウド型 AI サービスは、プランによる利用上限や従量課金といったコスト、政治判断による影響などの課題があります。また、学習無効に設定していても、ソースコードや設計情報は外部に送信されるため、セキュリティ要件が厳しい秘匿案件での利用は難しいです。
 

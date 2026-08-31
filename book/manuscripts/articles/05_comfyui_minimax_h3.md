@@ -6,6 +6,10 @@ profile: |
   モバイルアプリ開発者。自作 PC とローカル LLM の検証を趣味にしています。
 ---
 
+<div class="doc-header">
+  <div class="doc-title">Windows + Radeon GPU 環境で Claude Code と ComfyUI + MiniMax H3 を利用して動画を生成する</div>
+</div>
+
 # Windows + Radeon GPU 環境で Claude Code と ComfyUI + MiniMax H3 を利用して動画を生成する
 
 <aside class="publication-note">

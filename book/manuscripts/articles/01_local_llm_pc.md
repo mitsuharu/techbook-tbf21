@@ -6,6 +6,10 @@ profile: |
   モバイルアプリ開発者。自作 PC とローカル LLM の検証を趣味にしています。
 ---
 
+<div class="doc-header">
+  <div class="doc-title">ローカル LLM 素人が作るローカル LLM 検証機</div>
+</div>
+
 # ローカル LLM 素人が作るローカル LLM 検証機
 
 <aside class="publication-note">
