@@ -40,11 +40,11 @@ Xcode 26 から AI 機能が搭載され、Xcode はコード生成ができる�
 
 | 項目 | 内容 |
 | :-- | :-- |
-| 開発機 | MacBook Pro 14 インチ /  M5 / メモリ 32GB / 2025 |
+| 開発機 | MacBook Pro 14 インチ<br>M5 / メモリ 32GB / 2025 |
 | macOS | macOS 26.5.1 |
 | Xcode | Xcode 26.5.0 |
-| ローカル LLM / 実行環境 | LM Studio 0.4.18 / Ollama 0.31.1 |
-| 検証モデル | gemma 4 (12B / 27B など) / qwen 3.6 (27B / 35B など) / ornith 1.0 (9B / 35B など) |
+| ローカル LLM / 実行環境 | LM Studio 0.4.18<br>Ollama 0.31.1 |
+| 検証モデル | gemma 4 (12B / 27B など)<br>qwen 3.6 (27B / 35B など)<br>ornith 1.0 (9B / 35B など) |
 
 ### 免責事項
 
@@ -135,8 +135,8 @@ DeepReinforce が開発するコーディング特化のモデル [^ornith_1_0] 
 
 | ツール | 特徴 |
 | :-- | :-- |
-| LM Studio [^lmstudio] | GUI が充実して、モデルの検索・ダウンロード・サーバー起動までマウス操作で完結する。初学者にお勧めです。 |
-| Ollama [^ollama] | 基本的に CLI ベースで操作します。`ollama run`でモデルを実行する。サーバー用途・自動化に向いている。 |
+| <span class="nowrap">LM Studio [^lmstudio]</span> | GUI が充実して、モデルの検索・ダウンロード・サーバー起動までマウス操作で完結する。初学者にお勧めです。 |
+| <span class="nowrap">Ollama [^ollama]</span> | 基本的に CLI ベースで操作します。`ollama run`でモデルを実行する。サーバー用途・自動化に向いている。 |
 
 これら両者は OpenAI 互換の API サーバー機能を内蔵しています。Xcode 26 はこの互換 API に接続できるので、どちらを選択しても本記事の手順は利用できます。
 
@@ -247,14 +247,14 @@ LLM にもっとも影響するパーツは GPU です。本来は他パーツ�
 <figure class="column-top">
 <figcaption>検証機の構成と計測結果</figcaption>
 
-| 構成 | A | B | C | D | E |
+| <span class="nowrap">構成</span> | A | B | C | D | E |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| CPU | Intel / i7 12700 | Ryzen / 7 5700X | Ryzen / 7 7700 | Intel / i7 13700 | Intel / i5 14400 |
-| RAM | DDR4 / 64 GB | DDR4 / 64 GB | DDR5 / 32 GB | DDR5 / 32 GB | DDR4 / 128 GB |
-| GPU | Intel / Arc B580 / 12 GB | Radeon / RX 9060 XT / 16 GB | GeForce / RTX 5060 Ti / 16 GB | GeForce / RTX 4070 Ti / 12 GB | Radeon / AI PRO R9700 / 32 GB（2 枚） |
-| **計測結果** | (token/sec) | | | | |
-| gemma4 (9.6 GB) | 70.47 | 60.95 | 96.36 | 105.12 | 58.25 |
-| qwen3.6 (24 GB) | 32.86 | 20.85 | 63.87 | 53.79 | 74.39 |
+| CPU | Intel<br>i7 12700 | Ryzen<br>7 5700X | Ryzen<br>7 7700 | Intel<br>i7 13700 | Intel<br>i5 14400 |
+| RAM | DDR4<br>64 GB | DDR4<br>64 GB | DDR5<br>32 GB | DDR5<br>32 GB | DDR4<br>128 GB |
+| GPU | Intel<br>Arc B580<br>12 GB | Radeon<br>RX 9060 XT<br>16 GB | GeForce<br>RTX 5060 Ti<br>16 GB | GeForce<br>RTX 4070 Ti<br>12 GB | Radeon<br>AI PRO R9700<br>32 GB（2 枚） |
+| <b>計測結果</b> | (token/s) | | | | |
+| <span class="nowrap">gemma4</span><br>(9.6 GB) | 70.47 | 60.95 | 96.36 | 105.12 | 58.25 |
+| <span class="nowrap">qwen3.6</span><br>(24 GB) | 32.86 | 20.85 | 63.87 | 53.79 | 74.39 |
 
 </figure>
 
