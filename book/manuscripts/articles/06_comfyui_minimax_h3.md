@@ -8,7 +8,6 @@ profile: |
 
 <div class="doc-header">
   <div class="doc-title">Radeon で ComfyUI と MiniMax H3 を動かす</div>
-  <div class="doc-author">江本光晴</div>
 </div>
 
 # Radeon で ComfyUI と MiniMax H3 を動かす

@@ -8,7 +8,6 @@ profile: |
 
 <div class="doc-header">
   <div class="doc-title">OCuLink で GPU を増設する</div>
-  <div class="doc-author">江本光晴</div>
 </div>
 
 # OCuLink で GPU を増設する

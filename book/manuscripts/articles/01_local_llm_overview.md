@@ -8,7 +8,6 @@ profile: |
 
 <div class="doc-header">
   <div class="doc-title">ローカル LLM 環境を手元に置くということ</div>
-  <div class="doc-author">江本光晴</div>
 </div>
 
 # ローカル LLM 環境を手元に置くということ

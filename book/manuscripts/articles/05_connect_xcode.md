@@ -8,7 +8,6 @@ profile: |
 
 <div class="doc-header">
   <div class="doc-title">Xcode からローカル LLM サーバーを利用する</div>
-  <div class="doc-author">江本光晴</div>
 </div>
 
 # Xcode からローカル LLM サーバーを利用する

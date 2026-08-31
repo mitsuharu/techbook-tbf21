@@ -8,7 +8,6 @@ profile: |
 
 <div class="doc-header">
   <div class="doc-title">Windows 向け llama.cpp を再現可能にビルドする</div>
-  <div class="doc-author">江本光晴</div>
 </div>
 
 # Windows 向け llama.cpp を再現可能にビルドする
