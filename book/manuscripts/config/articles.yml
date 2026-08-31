@@ -1,9 +1,7 @@
-# 読者が環境を構築・拡張する順番で掲載する。
-- 01_local_llm_overview.md
-- 02_build_local_llm_pc.md
-- 03_add_gpu_with_oculink.md
-- 04_build_llama_cpp_windows.md
-- 05_connect_xcode.md
-- 06_comfyui_minimax_h3.md
-- 07_upgrade_rocm10.md
-- 08_operations_and_troubleshooting.md
+# 初出日の時系列順で掲載する。
+- 01_local_llm_pc.md
+- 02_xcode_local_llm.md
+- 03_oculink_gpu.md
+- 04_llama_cpp_windows.md
+- 05_comfyui_minimax_h3.md
+- 06_rocm10.md

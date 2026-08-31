@@ -2,7 +2,7 @@
 
 **Windows + Radeon を中心とした検証環境の構築**
 
-Windows と自作 PC を使ったローカル LLM 検証環境について、機材選定、マルチ GPU、llama.cpp、Xcode 連携、ComfyUI、ROCm の更新と運用をまとめる技術同人誌です。
+Windows と自作 PC を使ったローカル LLM 検証環境について、Qiita、mthr blog、iOSDC Japan 2026 パンフレット向けに公開した記事を時系列で収録する技術同人誌です。
 
 章構成、参照元、今後の追記候補は [book/OUTLINE.md](book/OUTLINE.md) を参照してください。執筆・校正・Pull Request のルールは [AGENTS.md](AGENTS.md) にまとめています。
 
