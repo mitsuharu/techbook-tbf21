@@ -25,12 +25,12 @@ Xcode 26 は AI によるコード生成を統合しました。Xcode 自身が�
 
 | 項目 | 検証環境 |
 | :-- | :-- |
-| 開発機 | MacBook Pro 14 インチ、M5、メモリ 32 GB |
-| OS | macOS 26.5.1 |
-| Xcode | 26.5.0 |
-| 推論サーバー | Windows 11、Radeon AI PRO R9700 32 GB × 2、RAM 128 GB |
-| API サーバー | LM Studio 0.4.18、Ollama 0.31.1 |
-| 主な検証モデル | Gemma 4、Qwen 3.6、Ornith 1.0 |
+| 開発機 | <span class="nowrap">MacBook Pro</span> 14 インチ、<span class="nowrap">M5</span>、メモリ 32 GB |
+| OS | <span class="nowrap">macOS 26.5.1</span> |
+| Xcode | <span class="nowrap">Xcode 26.5.0</span> |
+| 推論サーバー | <span class="nowrap">Windows 11</span>、<span class="nowrap">Radeon AI PRO R9700</span> 32 GB × 2、RAM 128 GB |
+| API サーバー | <span class="nowrap">LM Studio 0.4.18</span>、<span class="nowrap">Ollama 0.31.1</span> |
+| 主な検証モデル | <span class="nowrap">Gemma 4</span>、<span class="nowrap">Qwen 3.6</span>、<span class="nowrap">Ornith 1.0</span> |
 
 モデルとアプリケーション名は検証時点のものです。公開停止、改名、バージョン変更の可能性があります。接続方法を理解し、利用時点で取得できるモデルへ置き換えてください。
 
@@ -168,11 +168,11 @@ Agent の例は、`localhost`を Windows PC のアドレスへ変え、利用す
 
 | 症状 | 切り分け |
 | :-- | :-- |
-| Xcode にモデルが出ない | Mac 上のローカル接続、ポート、プロバイダー設定 |
-| Mac から API へ接続できない | Windows の待ち受け、IP、ファイアウォール |
-| Chat は動くが Agent は失敗する | ツール呼び出し、モデル指定、コンテキスト長 |
+| <span class="nowrap">Xcode</span> にモデルが出ない | Mac 上のローカル接続、ポート、プロバイダー設定 |
+| Mac から API へ接続できない | <span class="nowrap">Windows</span> の待ち受け、IP、ファイアウォール |
+| <span class="nowrap">Chat</span> は動くが <span class="nowrap">Agent</span> は失敗する | ツール呼び出し、モデル指定、コンテキスト長 |
 | 長い処理で停止する | サーバーログ、VRAM、コンテキスト、タイムアウト |
-| Xcode が重い | 推論が Mac 側で動いていないか、メモリプレッシャー |
+| <span class="nowrap">Xcode</span> が重い | 推論が Mac 側で動いていないか、メモリプレッシャー |
 | 出力が途中で壊れる | 推論エンジン、モデル、マルチ GPU、量子化形式 |
 
 確認は次の順で進めます。

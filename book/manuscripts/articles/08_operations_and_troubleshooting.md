@@ -23,14 +23,14 @@ profile: |
 
 | 層 | 主な要素 | 最小の確認 |
 | :-- | :-- | :-- |
-| 1. 電源と接続 | PSU、補助電源、PCIe、OCuLink | BIOS とデバイスマネージャーで認識する |
-| 2. OS とドライバー | Windows、AMD／NVIDIA ドライバー | GPU 単体の負荷テストが通る |
-| 3. 計算ランタイム | CUDA、ROCm、Vulkan、PyTorch | デバイス一覧と最小計算が通る |
-| 4. 推論エンジン | llama.cpp、ComfyUI | 小さい既知モデルを実行できる |
-| 5. モデル | GGUF、safetensors、量子化 | 対応形式を読み込める |
-| 6. API | Ollama、LM Studio、llama-server | localhost から応答する |
+| 1. 電源と接続 | PSU、補助電源、<span class="nowrap">PCIe</span>、<span class="nowrap">OCuLink</span> | BIOS とデバイスマネージャーで認識する |
+| 2. OS とドライバー | <span class="nowrap">Windows</span>、<span class="nowrap">AMD</span>／<span class="nowrap">NVIDIA</span> ドライバー | GPU 単体の負荷テストが通る |
+| 3. 計算ランタイム | <span class="nowrap">CUDA</span>、<span class="nowrap">ROCm</span>、<span class="nowrap">Vulkan</span>、<span class="nowrap">PyTorch</span> | デバイス一覧と最小計算が通る |
+| 4. 推論エンジン | <span class="nowrap">llama.cpp</span>、<span class="nowrap">Unsloth Desktop</span>、<span class="nowrap">ComfyUI</span> | 小さい既知モデルを実行できる |
+| 5. モデル | <span class="nowrap">GGUF</span>、<span class="nowrap">safetensors</span>、量子化 | 対応形式を読み込める |
+| 6. API | <span class="nowrap">Ollama</span>、<span class="nowrap">LM Studio</span>、<span class="nowrap">llama-server</span> | localhost から応答する |
 | 7. ネットワーク | LAN、ファイアウォール、認証 | 別端末の curl から応答する |
-| 8. クライアント | Xcode、エージェント、ワークフロー | 小さい固定タスクを完了する |
+| 8. クライアント | <span class="nowrap">Xcode</span>、エージェント、ワークフロー | 小さい固定タスクを完了する |
 
 下の層が失敗しているときに、上の層の設定を変えません。たとえば Xcode Agent が停止した場合、Agent のプロンプトを直す前に、curl で API を確認し、サーバー側で同じモデルを実行します。
 
@@ -55,11 +55,11 @@ ComfyUI でも、低解像度、短いフレーム数、既知の`int8_convrot`�
 
 | 項目 | 安定版 | 更新候補 |
 | :-- | :-- | :-- |
-| ドライバー | 現在正常に動く版 | 対象 ROCm の推奨版 |
-| ROCm | 7.2.1 または 7.14.0 | 10.0.0 |
+| ドライバー | 現在正常に動く版 | 対象 <span class="nowrap">ROCm</span> の推奨版 |
+| <span class="nowrap">ROCm</span> | 7.2.1 または 7.14.0 | 10.0.0 |
 | 推論エンジン | 保存済み成果物 | 更新した submodule |
 | モデル | ハッシュ固定の小型モデル | 利用したい新モデル |
-| クライアント | curl と CLI | Xcode やデスクトップ UI |
+| クライアント | <span class="nowrap">curl</span> と CLI | <span class="nowrap">Xcode</span> やデスクトップ UI |
 
 まず更新候補をひとつだけ変えます。新モデルが新しい llama.cpp を要求するなら、モデルと推論エンジンの 2 項目を変える必要があります。その場合もドライバーと ROCm は固定します。
 
@@ -150,10 +150,10 @@ ROCm 10 は動画生成を短縮しましたが、動的 VRAM を無効にし、
 | 保存する | 再取得・再生成する |
 | :-- | :-- |
 | セットアップスクリプト | Python 仮想環境 |
-| バージョンとハッシュ | ComfyUI 本体の作業コピー |
-| ワークフローとプロンプトひな型 | ROCm SDK とビルド中間物 |
+| バージョンとハッシュ | <span class="nowrap">ComfyUI</span> 本体の作業コピー |
+| ワークフローとプロンプトひな型 | <span class="nowrap">ROCm SDK</span> とビルド中間物 |
 | 小さい検証入力 | 公開モデルの重み |
-| ビルド済みの正常な配布 ZIP | GitHub Actions のキャッシュ |
+| ビルド済みの正常な配布 ZIP | <span class="nowrap">GitHub Actions</span> のキャッシュ |
 | 実測結果とログ | 再生成できる一時動画 |
 
 公開元から消える可能性があるモデルや、自分で変換した重みは別です。ライセンスを確認し、その条件で保存を許されたストレージへ置きます。生成した作品や再作成できない入力もバックアップします。

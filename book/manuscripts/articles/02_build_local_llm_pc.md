@@ -38,14 +38,14 @@ profile: |
 
 | パーツ | 構成 | 選定の軸 |
 | :-- | :-- | :-- |
-| OS | Windows 11 | 日常利用するゲームやアプリとの共存 |
-| CPU | Intel Core i5-14400 | 内蔵 GPU、消費電力、DDR4 対応 |
+| OS | <span class="nowrap">Windows 11</span> | 日常利用するゲームやアプリとの共存 |
+| CPU | <span class="nowrap">Intel Core i5-14400</span> | 内蔵 GPU、消費電力、DDR4 対応 |
 | CPU クーラー | 120 mm 級空冷 | 扱いやすさと保守性 |
-| マザーボード | ASRock B760 Pro RS/D4 Wi-Fi | PCIe スロット数、DDR4、LGA1700 |
-| GPU | Radeon AI PRO R9700 32 GB × 2 | VRAM 容量と価格のバランス |
-| RAM | DDR4 128 GB | GPU へ載せるモデルと OS の作業領域 |
-| ストレージ | NVMe SSD | 大きなモデルの読み込みと入れ替え |
-| 電源 | 1000 W、80 PLUS Gold、ATX 3.1 | GPU 2 枚と瞬間的な負荷への余裕 |
+| マザーボード | <span class="nowrap">ASRock B760 Pro RS/D4 Wi-Fi</span> | PCIe スロット数、DDR4、LGA1700 |
+| GPU | <span class="nowrap">Radeon AI PRO R9700</span> 32 GB × 2 | VRAM 容量と価格のバランス |
+| RAM | <span class="nowrap">DDR4</span> 128 GB | GPU へ載せるモデルと OS の作業領域 |
+| ストレージ | <span class="nowrap">NVMe SSD</span> | 大きなモデルの読み込みと入れ替え |
+| 電源 | 1000 W、<span class="nowrap">80 PLUS Gold</span>、<span class="nowrap">ATX 3.1</span> | GPU 2 枚と瞬間的な負荷への余裕 |
 | ケース | ATX 対応、通気重視 | 2 枚の GPU の冷却と作業性 |
 
 ## OS とバックエンドを先に考える
@@ -73,8 +73,8 @@ CPU の PCIe レーンとマザーボードの配線は、製品ページとマ�
 
 | 接続 | 片方向の理論帯域 |
 | :-- | --: |
-| PCIe 4.0 x16 | 約 31.5 GB/s |
-| PCIe 4.0 x4 | 約 7.88 GB/s |
+| <span class="nowrap">PCIe 4.0 x16</span> | 約 31.5 GB/s |
+| <span class="nowrap">PCIe 4.0 x4</span> | 約 7.88 GB/s |
 
 帯域には約 4 倍の差があります。しかし、推論中にモデルが VRAM へ載った後は、常に全モデルを PCIe 経由で転送するわけではありません。実際の影響は、モデルの分割方法、GPU 間転送、CPU オフロードの量で変わります。
 
@@ -131,11 +131,11 @@ R9700 は 1 枚あたり約 300 W の負荷を想定します。2 枚、CPU、�
 
 | 構成 | GPU | RAM | 小型モデルの実測 | 大型モデルの実測 |
 | :-- | :-- | --: | --: | --: |
-| A | Intel Arc B580 12 GB | 64 GB | 70.47 token/s | 32.86 token/s |
-| B | Radeon RX 9060 XT 16 GB | 64 GB | 60.95 token/s | 20.85 token/s |
-| C | GeForce RTX 5060 Ti 16 GB | 32 GB | 96.36 token/s | 63.87 token/s |
-| D | GeForce RTX 4070 Ti 12 GB | 32 GB | 105.12 token/s | 53.79 token/s |
-| E | Radeon AI PRO R9700 32 GB × 2 | 128 GB | 58.25 token/s | 74.39 token/s |
+| A | <span class="nowrap">Intel Arc B580</span> 12 GB | 64 GB | 70.47 token/s | 32.86 token/s |
+| B | <span class="nowrap">Radeon RX 9060 XT</span> 16 GB | 64 GB | 60.95 token/s | 20.85 token/s |
+| C | <span class="nowrap">GeForce RTX 5060 Ti</span> 16 GB | 32 GB | 96.36 token/s | 63.87 token/s |
+| D | <span class="nowrap">GeForce RTX 4070 Ti</span> 12 GB | 32 GB | 105.12 token/s | 53.79 token/s |
+| E | <span class="nowrap">Radeon AI PRO R9700</span> 32 GB × 2 | 128 GB | 58.25 token/s | 74.39 token/s |
 
 小型モデルでは GPU 1 枚の構成が速いこともあります。大型モデルでは、VRAM 容量の多い構成 E がもっとも速い結果でした。最高速度の比較前に、目的のモデルが GPU に収まるかを確認します。
 

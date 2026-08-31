@@ -26,11 +26,11 @@ GeForce では、ComfyUI の公式デスクトップ版を導入し、用意さ�
 
 | 項目 | 主検証機 | 追加検証機 |
 | :-- | :-- | :-- |
-| OS | Windows 11 | Windows 11 |
+| OS | <span class="nowrap">Windows 11</span> | <span class="nowrap">Windows 11</span> |
 | Python | 3.12 | 3.12 |
-| GPU | Radeon AI PRO R9700 32 GB × 2 | Radeon RX 9060 XT 16 GB |
+| GPU | <span class="nowrap">Radeon AI PRO R9700</span> 32 GB × 2 | <span class="nowrap">Radeon RX 9060 XT</span> 16 GB |
 | GPU ターゲット | `gfx1201` | `gfx1200` |
-| ROCm | 7.2.1 | 7.2.1 |
+| <span class="nowrap">ROCm</span> | 7.2.1 | 7.2.1 |
 | 用途 | 主な構築と生成 | 16 GB VRAM での再現確認 |
 
 MiniMax H3 の処理では、R9700 を 2 枚搭載していても、検証したワークフローは実質的に 1 枚分の VRAM を使いました。LLM 推論でモデルを 2 枚へ分割できたことと、同じようには考えられません。
@@ -130,10 +130,10 @@ GGUF という形式そのものが常に利用できないのではありませ
 
 | 配置先 | モデル | おおよそのサイズ |
 | :-- | :-- | --: |
-| `models/diffusion_models/` | MiniMax H3 `int8_convrot` | 19.5 GB |
-| `models/text_encoders/` | Qwen 3 VL `int8_convrot` | 25.3 GB |
-| `models/vae/` | Video VAE FP16 | 4.9 GB |
-| `models/vae/` | Audio VAE FP32 | 0.6 GB |
+| `models/diffusion_models/` | <span class="nowrap">MiniMax H3</span> `int8_convrot` | 19.5 GB |
+| `models/text_encoders/` | <span class="nowrap">Qwen 3 VL</span> `int8_convrot` | 25.3 GB |
+| `models/vae/` | <span class="nowrap">Video VAE FP16</span> | 4.9 GB |
+| `models/vae/` | <span class="nowrap">Audio VAE FP32</span> | 0.6 GB |
 
 大容量ダウンロードは途中で切断されます。`download_models.ps1`は、`curl -C -`を利用して中断位置から再開します。スクリプトを再実行しても、取得済みファイルを壊さない設計にします。
 
@@ -149,7 +149,7 @@ GGUF という形式そのものが常に利用できないのではありませ
 | `SETUP.md` | 手動手順と既知の問題 |
 | `scripts/setup.ps1` | 仮想環境からモデル取得までの自動化 |
 | `scripts/download_models.ps1` | 再開可能なモデル取得 |
-| `workflow_template.json` | ComfyUI のワークフローひな型 |
+| `workflow_template.json` | <span class="nowrap">ComfyUI</span> のワークフローひな型 |
 | `.claude/skills/minimax-h3-video/` | エージェントから動画を生成する処理 |
 | `examples/` | 生成できたワークフロー例 |
 

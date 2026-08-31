@@ -100,12 +100,12 @@ ROCm 版は、GPU のアーキテクチャコードを指定してビルドし�
 
 | ターゲット | 主な対応ハードウェアの例 |
 | :-- | :-- |
-| `gfx1100` | Radeon RX 7900 シリーズ |
-| `gfx1101` | Radeon RX 7800 XT、RX 7700 XT |
-| `gfx1150` | 一部の Ryzen AI 300 APU |
-| `gfx1151` | 一部の Ryzen AI Max APU |
-| `gfx1200` | Radeon RX 9060 シリーズ |
-| `gfx1201` | Radeon AI PRO R9700 |
+| `gfx1100` | <span class="nowrap">Radeon RX 7900</span> シリーズ |
+| `gfx1101` | <span class="nowrap">Radeon RX 7800 XT</span>、<span class="nowrap">RX 7700 XT</span> |
+| `gfx1150` | 一部の <span class="nowrap">Ryzen AI 300 APU</span> |
+| `gfx1151` | 一部の <span class="nowrap">Ryzen AI Max APU</span> |
+| `gfx1200` | <span class="nowrap">Radeon RX 9060</span> シリーズ |
+| `gfx1201` | <span class="nowrap">Radeon AI PRO R9700</span> |
 
 同じ製品シリーズでもターゲットは異なることがあります。表だけで決めず、AMD の最新の互換性資料と実機の情報を確認します。Windows 版 ROCm の対応範囲は、Linux 版と同じではありません。
 
@@ -176,7 +176,7 @@ CPU 推論でもコマンド自体は動きます。成功メッセージだけ�
 
 ## アプリケーションへ組み込む
 
-カスタム llama.cpp を指定できるアプリケーションなら、展開したディレクトリを選びます。筆者は、対応するデスクトップアプリからビルド済み llama.cpp を指定し、マルチ Radeon 環境で推論できることを確認しました。
+カスタム llama.cpp を指定できるアプリケーションなら、展開したディレクトリを選びます。筆者は Unsloth Desktop からビルド済み llama.cpp を指定し、マルチ Radeon 環境で推論できることを確認しました。コマンドラインだけでなく、実際に利用する GUI からもモデルの読み込みと応答を確認することで、配布 ZIP の動作検証になります。
 
 アプリケーションが llama.cpp を固定で同梱し、差し替えられない場合は、`llama-server.exe`を独立して起動します。クライアントは OpenAI 互換 API へ接続します。この方法なら、UI と推論エンジンの更新を分けられます。
 
@@ -186,12 +186,12 @@ API を LAN へ公開するときは、デフォルトの認証と待ち受け�
 
 | 症状 | 最初に確認する項目 |
 | :-- | :-- |
-| GPU が一覧にない | ドライバー、GPU ターゲット、`Run-Rocm.ps1`のログ |
-| CPU だけで動く | `-ngl`、`ggml-hip.dll`、実行時 DLL の読み込み |
-| 起動時に DLL エラー | ZIP の展開漏れ、Smart App Control、別 ROCm の PATH |
+| GPU が一覧にない | ドライバー、GPU ターゲット、<span class="nowrap">`Run-Rocm.ps1`</span>のログ |
+| CPU だけで動く | <span class="nowrap">`-ngl`</span>、<span class="nowrap">`ggml-hip.dll`</span>、実行時 DLL の読み込み |
+| 起動時に DLL エラー | ZIP の展開漏れ、<span class="nowrap">Smart App Control</span>、別 ROCm の PATH |
 | 1 枚だけ認識する | デバイスマネージャー、PCIe、電源、対象 GPU の対応 |
 | 複数 GPU で停止する | peer copy 有無、GPU ごとの割り当て、モデルサイズ |
-| 更新後だけ失敗する | llama.cpp、ROCm、ドライバーの各バージョン差分 |
+| 更新後だけ失敗する | <span class="nowrap">llama.cpp</span>、<span class="nowrap">ROCm</span>、ドライバーの各バージョン差分 |
 
 まず`llama-cli.exe --list-devices`と小さいモデルで確認し、UI アプリと大きいモデルをあとから追加します。複数の要因を同時に変えません。
 

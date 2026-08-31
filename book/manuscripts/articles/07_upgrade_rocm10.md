@@ -83,15 +83,15 @@ cd ..
 
 ## ROCm 7.2.1 との差分
 
-| 項目 | ROCm 7.2.1 | ROCm 10.0.0 |
+| 項目 | <span class="nowrap">ROCm 7.2.1</span> | <span class="nowrap">ROCm 10.0.0</span> |
 | :-- | :-- | :-- |
 | 配布 | 個別 wheel URL | pip インデックス |
 | ランタイム | SDK 関連を明示 | `torch[device-all]`の依存 |
-| 導入順 | ROCm 版 PyTorch を最後に再導入 | 検証時は再導入不要 |
+| 導入順 | <span class="nowrap">ROCm 版 PyTorch</span> を最後に再導入 | 検証時は再導入不要 |
 | 起動オプション | 追加なし | `--disable-dynamic-vram`が必要 |
-| Smart App Control | 断続的な影響 | 検証環境では import を阻止 |
+| <span class="nowrap">Smart App Control</span> | 断続的な影響 | 検証環境では import を阻止 |
 | 起動時間 | 40〜60 秒 | 約 15 秒 |
-| ComfyUI の ROCm 表示 | `(7, 2)` | `(7, 15)` |
+| <span class="nowrap">ComfyUI</span> の ROCm 表示 | `(7, 2)` | `(7, 15)` |
 
 ROCm 10.0.0 でも、ComfyUI のログが`ROCm version: (7, 15)`と表示しました。これは参照する HIP ランタイムのバージョン表示であり、インストールに失敗して 7 系へ戻ったという意味ではありません。PyTorch のバージョン、パッケージ一覧、実際に読み込んだ DLL も合わせて判断します。
 
@@ -142,7 +142,7 @@ Smart App Control は、Windows のバージョンや端末の状態によって
 
 Radeon AI PRO R9700、864×480、20 steps で、同じワークフローを比較しました。
 
-| 動画の長さ | フレーム数 | ROCm 7.2.1 | ROCm 10.0.0 | 短縮率 |
+| 動画の長さ | フレーム数 | <span class="nowrap">ROCm 7.2.1</span> | <span class="nowrap">ROCm 10.0.0</span> | 短縮率 |
 | :-- | --: | --: | --: | --: |
 | 約 5 秒 | 124 | 322 秒 | 280 秒 | 13％ |
 | 約 15 秒 | 362 | 1860 秒 | 1250 秒 | 33％ |

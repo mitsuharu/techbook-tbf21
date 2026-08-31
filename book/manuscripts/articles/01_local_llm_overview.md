@@ -80,13 +80,18 @@ MoE は Mixture of Experts の略で、複数の専門家に相当する部分�
 
 ## 推論を支えるソフトウェア
 
-本書では、主に LM Studio、Ollama、llama.cpp を扱います。LM Studio と Ollama は、内部の推論に llama.cpp を利用する構成を持ち、モデルの管理や API サーバーなどを使いやすい形で提供します。
+本書では、主に LM Studio、Unsloth Desktop、Ollama、llama.cpp を扱います。LM Studio と Ollama は、内部の推論に llama.cpp を利用する構成を持ち、モデルの管理や API サーバーなどを使いやすい形で提供します。
+
+Unsloth Desktop は、モデルの実行と学習を GUI から扱い、OpenAI 互換 API やエージェントとの接続も提供するデスクトップアプリです。公式サイトでは Windows、macOS、Linux に対応しています。[^unsloth-desktop] 筆者は Radeon 検証機で動作を確認し、自分でビルドした llama.cpp の動作確認にも利用しています。推論、モデル管理、エージェント連携をひとつの画面で扱える選択肢です。
 
 | ツール | 向いている用途 | 本書での位置づけ |
 | :-- | :-- | :-- |
-| LM Studio | GUI でモデルを探し、設定を変えながら試す | 初期検証と NVIDIA のマルチ GPU 検証 |
-| Ollama | CLI と API でモデルを継続運用する | Radeon 検証機の推論サーバー |
-| llama.cpp | バックエンドやビルド設定まで制御する | Windows 向けビルドと問題の切り分け |
+| <span class="nowrap">LM Studio</span> | GUI でモデルを探し、設定を変えながら試す | 初期検証と <span class="nowrap">NVIDIA</span> のマルチ GPU 検証 |
+| <span class="nowrap">Unsloth Desktop</span> | GUI でモデルを実行・学習し、エージェントへ接続する | <span class="nowrap">Radeon</span> と自作ビルドした <span class="nowrap">llama.cpp</span> の動作確認 |
+| <span class="nowrap">Ollama</span> | CLI と API でモデルを継続運用する | Radeon 検証機の推論サーバー |
+| <span class="nowrap">llama.cpp</span> | バックエンドやビルド設定まで制御する | <span class="nowrap">Windows</span> 向けビルドと問題の切り分け |
+
+[^unsloth-desktop]: [Unsloth Desktop 公式サイト](https://www.unsloth.ai/)
 
 これらは OpenAI 互換 API を提供できます。推論用 PC で API サーバーを起動し、開発用 Mac や別のクライアントから LAN 経由で利用できます。クライアント側はモデルを保持せず、Xcode やエージェントの処理に専念できます。
 
@@ -102,7 +107,7 @@ MoE は Mixture of Experts の略で、複数の専門家に相当する部分�
         │ LAN / OpenAI 互換 API
         ▼
 Windows 11 検証機
-  ├─ Ollama / LM Studio / llama.cpp
+  ├─ Ollama / LM Studio / Unsloth Desktop / llama.cpp
   ├─ Radeon GPU × 2
   └─ ComfyUI + ROCm + MiniMax H3
 ```

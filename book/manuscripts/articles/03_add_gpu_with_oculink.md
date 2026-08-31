@@ -25,10 +25,10 @@ profile: |
 
 | パーツ | 構成 |
 | :-- | :-- |
-| CPU | AMD Ryzen 7 7700 |
+| CPU | <span class="nowrap">AMD Ryzen 7 7700</span> |
 | RAM | 32 GB |
-| 既存 GPU | GeForce RTX 5060 Ti 16 GB |
-| マザーボード | microATX、PCIe 4.0 x4 の空きあり |
+| 既存 GPU | <span class="nowrap">GeForce RTX 5060 Ti</span> 16 GB |
+| マザーボード | <span class="nowrap">microATX</span>、<span class="nowrap">PCIe 4.0 x4</span> の空きあり |
 
 1 枚の RTX 5060 Ti では ComfyUI を簡単に導入でき、動画生成も成功しました。しかし、約 20 GB の LLM モデルは 16 GB の VRAM に収まりません。CPU と RAM へのオフロードを増やせば動く可能性はありますが、速度が大きく低下します。
 
