@@ -3,7 +3,7 @@
 # 著者紹介のプロフィールテンプレート
 # 使用可能な変数: {author} (著者名), {title} (記事タイトル、複数の場合は読点区切り), {profile} (プロフィール文)
 profile_template: |
-  ### {author}（{title}）
+  ### {author}
 
   {profile}
 
@@ -21,7 +21,7 @@ articles_toc: |
 #     2023年5月15日 初版
 #     2023年5月20日 初版 2刷
 #     2023年6月15日 第二版
-edition_history: 初版
+edition_history: 2026 年初版発行。
 
 # 奥付の行定義（label と value の組みの配列）
 # 行を自由に追加・変更・削除できます。

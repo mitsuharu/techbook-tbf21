@@ -17,8 +17,8 @@ profile: |
 
 GeForce では、ComfyUI の公式デスクトップ版を導入し、用意されたワークフローを選ぶだけで生成できました。同じ手順を Radeon で試すと、起動段階から失敗しました。本章では、CUDA 前提の配布物を避け、ROCm 版 PyTorch、対応する量子化形式、復旧処理を組み合わせた過程を説明します。作業記録と再現用スクリプトは公開しています。[^comfy-repository] [^comfy-blog]
 
-[^comfy-repository]: ComfyUI + ROCm + MiniMax H3 https://github.com/mitsuharu/ComfyUI-ROCm
-[^comfy-blog]: Windows + Radeon GPU 環境で Claude Code と ComfyUI + MiniMax H3 を利用して動画を生成する https://mthr.hatenablog.com/entry/2026/08/26/122829
+[^comfy-repository]: [ComfyUI + ROCm + MiniMax H3](https://github.com/mitsuharu/ComfyUI-ROCm)
+[^comfy-blog]: [Windows + Radeon GPU 環境で Claude Code と ComfyUI + MiniMax H3 を利用して動画を生成する](https://mthr.hatenablog.com/entry/2026/08/26/122829)
 
 ## 検証環境
 
@@ -39,7 +39,7 @@ MiniMax H3 の処理では、R9700 を 2 枚搭載していても、検証した
 
 ComfyUI 自体が Radeon に対応していないわけではありません。問題は、簡単に導入できる配布物が CUDA と NVIDIA GPU を主な対象にしていたことです。
 
-GeForce の場合は、同梱された PyTorch が CUDA を利用し、`torch.cuda.is_available()` が `True` になります。Radeon では、CUDA 向け PyTorch が AMD GPU を利用できません。ComfyUI の画面へ到達できても、CPU 実行になるか、GPU 初期化で失敗します。
+GeForce の場合は、同梱された PyTorch が CUDA を利用し、`torch.cuda.is_available()`が`True`になります。Radeon では、CUDA 向け PyTorch が AMD GPU を利用できません。ComfyUI の画面へ到達できても、CPU 実行になるか、GPU 初期化で失敗します。
 
 Radeon では、次の組み合わせを明示的にそろえます。
 
@@ -51,14 +51,14 @@ Radeon では、次の組み合わせを明示的にそろえます。
 
 ## Python 環境を分離する
 
-既存の Ollama、llama.cpp、ほかの Python アプリへ影響させないため、リポジトリ直下に仮想環境を作ります。ROCm 7.2.1 の初期構築では、依存関係を入れる順序が重要でした。
+既存の Ollama、llama.cpp、他の Python アプリへ影響させないため、リポジトリ直下に仮想環境を作ります。ROCm 7.2.1 の初期構築では、依存関係を入れる順序が重要でした。
 
-1. Python 3.12 で `.venv` を作る
+1. Python 3.12 で`.venv`を作る
 2. ROCm SDK と ComfyUI 本体を準備する
-3. ComfyUI の `requirements.txt` を導入する
+3. ComfyUI の`requirements.txt`を導入する
 4. ROCm 版 PyTorch を最後に入れ直す
 
-ComfyUI の依存関係を導入する途中で、汎用版の PyTorch が入る場合がありました。ROCm 版を先に導入しても上書きされるため、最後に ROCm 版を指定します。
+ComfyUI の依存関係を導入する途中で、汎用版の PyTorch へ置き換わることがありました。先に導入した ROCm 版は上書きされます。そのため、最後に ROCm 版を指定します。
 
 当時の例は次のとおりです。これは ROCm 7.2.1 用です。最新版の組み合わせは AMD の公式情報を確認してください。
 
@@ -76,11 +76,11 @@ python -m pip install --no-cache-dir `
   "import torch; print(torch.__version__, torch.cuda.is_available(), torch.cuda.device_count())"
 ```
 
-ROCm でも PyTorch の互換 API は `torch.cuda` という名前を使います。ログに `cuda:0 AMD Radeon ...` と出ても、NVIDIA CUDA を使っているという意味ではありません。バックエンドとデバイス名を合わせて確認します。
+ROCm でも PyTorch の互換 API は`torch.cuda`という名前を使います。ログに`cuda:0 AMD Radeon ...`と出ても、NVIDIA CUDA を使っているという意味ではありません。バックエンドとデバイス名を合わせて確認します。
 
 ## GPU ターゲットを特定する
 
-Radeon AI PRO R9700 の GPU ターゲットは `gfx1201` です。RX 9060 XT は `gfx1200` です。PyTorch と ROCm がそのターゲットを含まなければ、GPU 名が見えても必要なカーネルを実行できない場合があります。
+Radeon AI PRO R9700 の GPU ターゲットは`gfx1201`です。RX 9060 XT は`gfx1200`です。PyTorch と ROCm がそのターゲットを含まなければ、GPU 名が見えても必要なカーネルを実行できない場合があります。
 
 起動ログでは、次の項目を確認します。
 
@@ -109,9 +109,9 @@ GGUF という形式そのものが常に利用できないのではありませ
 
 ### NVIDIA 向け NVFP4
 
-公式ワークフローが既定で指定したテキストエンコーダーは、NVFP4 量子化でした。これは NVIDIA の対応ハードウェアを前提とし、検証した ROCm 環境では動きませんでした。
+公式ワークフローがデフォルトで指定したテキストエンコーダーは、NVFP4 量子化でした。これは NVIDIA の対応ハードウェアを前提とし、検証した ROCm 環境では動きませんでした。
 
-最終的に、UNet とテキストエンコーダーを公式の `int8_convrot` 版へそろえました。この形式は検証した ROCm バックエンドで利用でき、生成まで進みました。
+最終的に、UNet とテキストエンコーダーを公式の`int8_convrot`版へそろえました。この形式は検証した ROCm バックエンドで利用でき、生成まで進みました。
 
 モデルを選ぶときは、次をセットで確認します。
 
@@ -122,7 +122,7 @@ GGUF という形式そのものが常に利用できないのではありませ
 - GPU バックエンドと対応命令
 - 必要な VRAM と RAM
 
-ファイル名に `official` や `quantized` とあっても、自分の GPU で動く保証にはなりません。
+ファイル名に`official`や`quantized`とあっても、自分の GPU で動く保証にはなりません。
 
 ## 必要なモデルを再取得可能にする
 
@@ -135,9 +135,9 @@ GGUF という形式そのものが常に利用できないのではありませ
 | `models/vae/` | Video VAE FP16 | 4.9 GB |
 | `models/vae/` | Audio VAE FP32 | 0.6 GB |
 
-大容量ダウンロードは途中で切断されます。`download_models.ps1` は、`curl -C -` を利用して中断位置から再開します。スクリプトを再実行しても、取得済みファイルを壊さない設計にします。
+大容量ダウンロードは途中で切断されます。`download_models.ps1`は、`curl -C -`を利用して中断位置から再開します。スクリプトを再実行しても、取得済みファイルを壊さない設計にします。
 
-配布元のファイルが更新される可能性があります。再現性を重視するなら、ダウンロード URL だけでなく、ファイルサイズとハッシュも記録します。モデルのライセンスと利用条件も、取得時点のものを保存します。
+配布元のファイルは更新される可能性があります。再現性を重視するなら、ダウンロード URL だけでなく、ファイルサイズとハッシュも記録します。モデルのライセンスと利用条件も、取得時点のものを保存します。
 
 ## セットアップをスクリプトへ落とす
 
@@ -171,7 +171,7 @@ GUI で各ノードを調整する方が、表現を細かく制御できます�
 
 ## サーバー停止を前提に回復する
 
-長い動画や高い解像度を試すと、生成途中に ComfyUI のサーバープロセスが終了する場合がありました。原因は特定できていません。VRAM と RAM、Windows の GPU タイムアウト、ROCm、ComfyUI のいずれも候補です。
+長い動画や高い解像度を試すと、生成途中に ComfyUI のサーバープロセスは終了することがありました。原因は特定できていません。候補は VRAM と RAM、Windows の GPU タイムアウト、ROCm、ComfyUI です。
 
 原因不明のまま「落ちないこと」を期待せず、生成スクリプトに回復処理を追加しました。
 
@@ -194,6 +194,6 @@ GUI で各ノードを調整する方が、表現を細かく制御できます�
 
 ## まとめ
 
-Windows と Radeon で ComfyUI と MiniMax H3 を動かすには、ROCm 版 PyTorch、GPU ターゲット、量子化形式をそろえる必要がありました。GGUF と NVFP4 で失敗した後、`int8_convrot` 版を選び、R9700 と RX 9060 XT で動画生成を確認しました。
+Windows の Radeon 環境で ComfyUI と MiniMax H3 を動かすには、ROCm 版 PyTorch、GPU ターゲット、量子化形式をそろえる必要がありました。GGUF と NVFP4 は読み込みに失敗しました。その後に`int8_convrot`版を選び、R9700 と RX 9060 XT で動画生成を確認しました。
 
 セットアップとモデル取得を再実行可能なスクリプトにし、サーバー停止からの回復も自動化しました。次章では、この ROCm 7.2.1 の環境を ROCm 10.0.0 へ更新します。導入は簡潔になりますが、新しい互換性問題も発生します。
