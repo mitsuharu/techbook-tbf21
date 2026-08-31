@@ -30,3 +30,92 @@
     font-size: 0.8rem;
     margin-block-start: -0.5rem;
 }
+
+/**
+ * Qiita の Note 記法を参考にした転載元の注記。
+ */
+.publication-note {
+    border: 1px solid #7b91a8;
+    border-left: 0.35rem solid #42729c;
+    border-radius: 0.25rem;
+    background: #f3f7fa;
+    margin-block: 1rem 1.5rem;
+    padding: 0.75rem 0.9rem;
+    break-inside: avoid;
+}
+
+.publication-note-label {
+    color: #315b7d;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-block-end: 0.3rem;
+}
+
+.publication-note p {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.publication-note-url {
+    overflow-wrap: anywhere;
+    color: #40556a;
+    margin-block-start: 0.35rem !important;
+}
+
+/**
+ * Web の埋め込みを紙面でも読める形にしたリンクカード。
+ */
+.link-card {
+    align-items: center;
+    border: 1px solid #aab4be;
+    border-radius: 0.3rem;
+    display: flex;
+    gap: 0.75rem;
+    margin-block: 0.9rem;
+    padding: 0.7rem;
+    break-inside: avoid;
+}
+
+.link-card-thumbnail {
+    flex: 0 0 auto;
+    height: 3rem;
+    margin: 0;
+    object-fit: contain;
+    width: 3rem;
+}
+
+.link-card-body {
+    min-width: 0;
+}
+
+.link-card-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.link-card-domain {
+    color: #526474;
+    font-size: 0.72rem;
+    margin-block-start: 0.2rem;
+}
+
+.link-card-url {
+    color: #315b7d;
+    font-size: 0.68rem;
+    line-height: 1.3;
+    margin-block-start: 0.15rem;
+    overflow-wrap: anywhere;
+}
+
+.entry-content figure,
+.figure-image {
+    break-inside: avoid;
+}
+
+.figure-image img {
+    max-height: 68vh;
+    object-fit: contain;
+}
