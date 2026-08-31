@@ -14,7 +14,7 @@ profile: |
 
 <aside class="publication-note">
   <div class="publication-note-label">Information</div>
-  <div class="publication-note-text">これは 2026 年 7 月 16 日にGitHubで掲載しました。</div>
+  <div class="publication-note-text">これは 2026 年 7 月 16 日にGitHubで掲載しました。適宜、加筆修正しています。</div>
   <div class="publication-note-url">掲載元：https://github.com/mitsuharu/iosdc-2026-pamphlet/blob/main/manuscripts/index.md</div>
 </aside>
 

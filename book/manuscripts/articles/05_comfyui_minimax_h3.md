@@ -14,7 +14,7 @@ profile: |
 
 <aside class="publication-note">
   <div class="publication-note-label">Information</div>
-  <div class="publication-note-text">これは 2026 年 8 月 26 日にブログで掲載しました。</div>
+  <div class="publication-note-text">これは 2026 年 8 月 26 日にブログで掲載しました。適宜、加筆修正しています。</div>
   <div class="publication-note-url">掲載元：https://mthr.hatenablog.com/entry/2026/08/26/122829</div>
 </aside>
 

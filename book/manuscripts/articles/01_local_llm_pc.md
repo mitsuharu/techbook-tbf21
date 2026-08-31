@@ -14,7 +14,7 @@ profile: |
 
 <aside class="publication-note">
   <div class="publication-note-label">Information</div>
-  <div class="publication-note-text">これは 2026 年 6 月 21 日にQiitaで掲載しました。</div>
+  <div class="publication-note-text">これは 2026 年 6 月 21 日にQiitaで掲載しました。適宜、加筆修正しています。</div>
   <div class="publication-note-url">掲載元：https://qiita.com/mitsuharu_e/items/92a3eccb65d9b5c4ceca</div>
 </aside>
 
