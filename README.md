@@ -1,6 +1,10 @@
-# daigirin-template
+# 自作 PC で始めるローカル LLM
 
-技術同人誌のテンプレートリポジトリです。新しい同人誌を作成するときは、このリポジトリを利用してください。
+**Windows + Radeon を中心とした検証環境の構築**
+
+Windows と自作 PC を使ったローカル LLM 検証環境について、機材選定、マルチ GPU、llama.cpp、Xcode 連携、ComfyUI、ROCm の更新と運用をまとめる技術同人誌です。
+
+章構成、参照元、今後の追記候補は [book/OUTLINE.md](book/OUTLINE.md) を参照してください。執筆・校正・Pull Request のルールは [AGENTS.md](AGENTS.md) にまとめています。
 
 ## PDF の生成方法
 

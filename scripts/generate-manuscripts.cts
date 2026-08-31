@@ -71,6 +71,10 @@ if (require.main === module) {
     typeof vivliostyleConfig.title === 'string'
       ? vivliostyleConfig.title.trim() || DEFAULT_BOOK_TITLE
       : DEFAULT_BOOK_TITLE
+  const bookSubtitle =
+    typeof vivliostyleConfig.subtitle === 'string'
+      ? vivliostyleConfig.subtitle.trim()
+      : ''
   const publisherName =
     typeof vivliostyleConfig.author === 'string'
       ? vivliostyleConfig.author.trim()
@@ -105,7 +109,13 @@ if (require.main === module) {
   if (
     writeGeneratedFile(
       indexPath,
-      generateIndex(articles, bookTitle, tocItems, generateConfig),
+      generateIndex(
+        articles,
+        bookTitle,
+        bookSubtitle,
+        tocItems,
+        generateConfig,
+      ),
     )
   ) {
     generatedCount += 1
@@ -120,7 +130,7 @@ if (require.main === module) {
   if (
     writeGeneratedFile(
       colophonPath,
-      generateColophon(bookTitle, publisherName, generateConfig),
+      generateColophon(bookTitle, bookSubtitle, publisherName, generateConfig),
     )
   ) {
     generatedCount += 1

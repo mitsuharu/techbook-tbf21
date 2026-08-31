@@ -1,5 +1,9 @@
-# 記事の順番を制御するファイル（オプション）
-# このファイルを削除すると、articles ディレクトリ内のファイルがアルファベット順で自動設定されます。
-# 記事ファイルのファイル名のみを記載してください（パスは不要）。
-# - sample0.md
-# - sample1.md
+# 読者が環境を構築・拡張する順番で掲載する。
+- 01_local_llm_overview.md
+- 02_build_local_llm_pc.md
+- 03_add_gpu_with_oculink.md
+- 04_build_llama_cpp_windows.md
+- 05_connect_xcode.md
+- 06_comfyui_minimax_h3.md
+- 07_upgrade_rocm10.md
+- 08_operations_and_troubleshooting.md
