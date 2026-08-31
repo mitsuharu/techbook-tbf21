@@ -31,6 +31,7 @@ const {
       author: string
     }>,
     bookTitle: string,
+    bookSubtitle: string,
     tocItems: Array<
       | { type: 'generated'; title: string; file: string }
       | { type: 'page'; title: string; file: string }
@@ -49,6 +50,7 @@ const {
   ) => string
   generateColophon: (
     bookTitle: string,
+    bookSubtitle: string,
     publisherName: string,
     generateConfig: Record<string, unknown>,
   ) => string
@@ -173,6 +175,7 @@ describe('generateIndex', () => {
         },
       ],
       '書籍タイトル',
+      '',
       [{ type: 'articles' }],
       { articles_toc: '{title}({author})' },
     )
@@ -183,6 +186,7 @@ describe('generateIndex', () => {
     const result = generateIndex(
       [],
       '書籍タイトル',
+      '',
       [{ type: 'page', title: 'はじめに', file: 'pages/preface.html' }],
       {},
     )
@@ -190,8 +194,13 @@ describe('generateIndex', () => {
   })
 
   test('書籍タイトルを H1 として含む', () => {
-    const result = generateIndex([], 'テスト本', [], {})
+    const result = generateIndex([], 'テスト本', '', [], {})
     expect(result).toContain('# テスト本')
+  })
+
+  test('副題を専用クラス付きで含む', () => {
+    const result = generateIndex([], 'テスト本', 'テスト副題', [], {})
+    expect(result).toContain('<p class="book-subtitle">テスト副題</p>')
   })
 })
 
@@ -242,33 +251,40 @@ describe('generateAuthors', () => {
 
 describe('generateColophon', () => {
   test('書籍タイトルと発行者を含む', () => {
-    const result = generateColophon('テスト本', '発行者名', {})
+    const result = generateColophon('テスト本', '', '発行者名', {})
     expect(result).toContain('テスト本')
     expect(result).toContain('発行者名')
   })
 
   test('edition_history が未設定の場合は「初版」を使う', () => {
-    const result = generateColophon('本', '発行者', {})
+    const result = generateColophon('本', '', '発行者', {})
     expect(result).toContain('初版')
   })
 
   test('edition_history を反映する', () => {
-    const result = generateColophon('本', '発行者', {
+    const result = generateColophon('本', '', '発行者', {
       edition_history: '第2版',
     })
     expect(result).toContain('第2版')
   })
 
   test('copyright_year を © 表示に含める', () => {
-    const result = generateColophon('本', '発行者', { copyright_year: '2025' })
+    const result = generateColophon('本', '', '発行者', {
+      copyright_year: '2025',
+    })
     expect(result).toContain('© 2025 発行者')
   })
 
   test('colophon_rows の内容を含む', () => {
-    const result = generateColophon('本', '発行者', {
+    const result = generateColophon('本', '', '発行者', {
       colophon_rows: [{ label: '発行日', value: '2025年1月1日' }],
     })
     expect(result).toContain('発行日')
     expect(result).toContain('2025年1月1日')
+  })
+
+  test('副題を専用クラス付きで含む', () => {
+    const result = generateColophon('本', '副題', '発行者', {})
+    expect(result).toContain('<div class="book-subtitle">副題</div>')
   })
 })

@@ -97,6 +97,7 @@ function generateIndex(
     author: string
   }>,
   bookTitle: string,
+  bookSubtitle: string,
   tocItems: Array<
     | { type: 'generated'; title: string; file: string }
     | { type: 'page'; title: string; file: string }
@@ -104,6 +105,9 @@ function generateIndex(
   >,
   generateConfig: Record<string, unknown>,
 ) {
+  const subtitleLines = bookSubtitle
+    ? ['', `<p class="book-subtitle">${bookSubtitle}</p>`]
+    : []
   const lines = [
     '---',
     'class: exclude-hashira',
@@ -112,6 +116,7 @@ function generateIndex(
     '<!-- このファイルは自動生成されます。直接編集しないでください。 -->',
     '',
     `# ${bookTitle}`,
+    ...subtitleLines,
     '',
     '<nav id="toc" role="doc-toc">',
     '',
@@ -227,6 +232,7 @@ function generateAuthors(
  */
 function generateColophon(
   bookTitle: string,
+  bookSubtitle: string,
   publisherName: string,
   generateConfig: Record<string, unknown>,
 ) {
@@ -261,6 +267,9 @@ function generateColophon(
   )
 
   // 文字列配列で組み立てることで、テンプレート変更時の差分を追いやすくする。
+  const subtitleLines = bookSubtitle
+    ? ['', `<div class="book-subtitle">${bookSubtitle}</div>`]
+    : []
   const lines = [
     '---',
     'class: exclude-hashira',
@@ -275,6 +284,7 @@ function generateColophon(
     '<section class="colophon">',
     '',
     `## ${bookTitle}`,
+    ...subtitleLines,
     '',
     editionHistory,
     '',

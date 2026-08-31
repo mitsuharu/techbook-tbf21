@@ -1,4 +1,6 @@
-# Windows + Radeon で育てるローカル LLM 環境
+# 自作 PC で始めるローカル LLM
+
+**Windows + Radeon を中心とした検証環境の構築**
 
 Windows と自作 PC を使ったローカル LLM 検証環境について、機材選定、マルチ GPU、llama.cpp、Xcode 連携、ComfyUI、ROCm の更新と運用をまとめる技術同人誌です。
 

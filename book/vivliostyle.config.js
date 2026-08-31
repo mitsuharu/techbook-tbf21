@@ -1,7 +1,8 @@
 const { getBookEntries } = require('../scripts/getArticleEntries.cts')
 
 module.exports = {
-  title: 'Windows + Radeon で育てるローカル LLM 環境',
+  title: '自作 PC で始めるローカル LLM',
+  subtitle: 'Windows + Radeon を中心とした検証環境の構築',
   author: '江本光晴',
   language: 'ja',
   size: 'A5',

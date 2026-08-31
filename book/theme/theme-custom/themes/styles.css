@@ -15,3 +15,18 @@
     word-wrap: break-word;
     white-space: nowrap;
 }
+
+/**
+ 書名の副題
+ */
+.book-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-block: 0.75rem 0;
+}
+
+.colophon .book-subtitle {
+    font-size: 0.8rem;
+    margin-block-start: -0.5rem;
+}
