@@ -1,0 +1,17 @@
+/**
+ 改行しないスタイル
+
+ @example
+
+ ```md
+ <div class="nowrap">改行したくないフェーズ</div>
+ ```
+ 
+ ```md
+ <span class="nowrap">改行したくないフェーズ</span>
+ ```
+ */
+.nowrap {
+    word-wrap: break-word;
+    white-space: nowrap;
+}
