@@ -13,9 +13,9 @@ profile: |
 # ローカル LLM 素人が作るローカル LLM 検証機
 
 <aside class="publication-note">
-  <div class="publication-note-label">転載記事</div>
-  <p>これは 2026 年 6 月 21 日に Qiita で掲載しました。2026 年 7 月 8 日更新版の本文を、表記を変えずに転載しています。埋め込み URL は印刷できるリンクカードに置き換えました。</p>
-  <p class="publication-note-url">掲載元：https://qiita.com/mitsuharu_e/items/92a3eccb65d9b5c4ceca</p>
+  <div class="publication-note-label">Information</div>
+  <div class="publication-note-text">これは 2026 年 6 月 21 日にQiitaで掲載しました。</div>
+  <div class="publication-note-url">掲載元：https://qiita.com/mitsuharu_e/items/92a3eccb65d9b5c4ceca</div>
 </aside>
 
 <!-- textlint-disable -->
