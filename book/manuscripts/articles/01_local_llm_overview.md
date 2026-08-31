@@ -47,7 +47,7 @@ profile: |
 
 ## すべてを置き換えるものではない
 
-ローカル LLM とクラウド LLM は、どちらか一方を選ぶ関係ではありません。個人が用意できる GPU と電力には限界があります。数百 GB から TB 級の重みをもつモデルは公開されています。しかし、家庭用 PC で扱うことは困難です。小中規模のモデルも改善を続けています。複雑な推論、広い知識、長時間のエージェント処理では、クラウド上の大規模モデルが優位です。
+ローカル LLM とクラウド LLM は、どちらか一方を選ぶ関係ではありません。個人が用意できる GPU、メモリやストレージなどの計算機環境には限界があります。数百 GB から TB 級の重みをもつモデルは公開されています。しかし、家庭用 PC で扱うことは困難です。小中規模のモデルも改善を続けています。複雑な推論、広い知識、長時間のエージェント処理では、クラウド上の大規模モデルが優位です。
 
 筆者は、次のように役割を分けています。
 
@@ -67,36 +67,36 @@ profile: |
 
 ### 量子化
 
-1 パラメータを 16 bit で保存する 32B モデルは、重みだけで単純計算約 64 GB です。家庭用 GPU に載せるには大きすぎます。そこで、重みを低いビット数で表現する量子化を利用します。たとえば 4 bit 量子化なら、重みの理論上の大きさは 16 bit の 4 分の 1 です。
+一般的に 1 パラメータを 16 bit で保存するので、 32B モデルは単純計算で約 64 GB になります。家庭用 GPU に載せるには大きすぎます。そこで、重みを低いビット数で表現する量子化を利用します。たとえば 4 bit 量子化なら、重みの理論上の大きさは 16 bit の 4 分の 1 です。
 
-実際のメモリ使用量は、重みだけでは決まりません。KV キャッシュ、コンテキスト長、実行時バッファ、推論エンジンの実装も影響します。モデルファイルが VRAM 容量に収まるという理由だけで、動作を保証できません。数 GB の余裕を持ち、実行中の使用量を計測します。
+実際のメモリ使用量は、重みだけでは決まりません。KV キャッシュ、コンテキスト長、実行時バッファ、推論エンジンの実装も影響します。モデルファイルが VRAM 容量に収まるという理由だけで、動作を保証できません。数 GB の余裕を持ち、実行中の使用量を計測しましょう。
+
+### Dense モデル
+
+一般的な GPT シリーズなどは、Dense（密な）モデルと呼ばれるアーキテクチャを採用しています。すべてのパラメータがすべての入力に対して機能し、モデルの重みはそのままメモリに読み込まれます。モデルサイズと必要なメモリがほぼ比例するため、量子化後のファイルサイズから VRAM 使用量を見積もりやすい特徴があります。
 
 ### MoE
 
-MoE は Mixture of Experts の略で、複数の専門家に相当する部分から、入力に応じて一部を使う方式です。モデル全体のパラメータ数が大きくても、トークンごとに利用するパラメータを限定できます。計算量を抑えながら能力を高められる一方で、利用しない部分を含む重みはメモリへ読み込む必要があります。
+一方、MoE は Mixture of Experts の略で、複数の専門家に相当する部分から、入力に応じて一部を使う方式です。モデル全体のパラメータ数が大きくても、トークンごとに利用するパラメータを限定できます。計算量を抑えながら能力を高められるのが利点です。
 
-したがって、モデルを選ぶときは総パラメータ数だけでなく、量子化後のファイルサイズ、アクティブパラメータ数、必要なコンテキスト長を確認します。
+しかし、利用しない部分を含む重みはメモリへ読み込む必要があります。モデルを選ぶときは総パラメータ数だけでなく、量子化後のファイルサイズ、アクティブパラメータ数（実際に計算に使われるパラメータ）、必要なコンテキスト長を確認します。
 
 ## 推論を支えるソフトウェア
 
-本書では、主に LM Studio、Unsloth Desktop、Ollama、llama.cpp を扱います。LM Studio と Ollama は、内部の推論に llama.cpp を利用する構成を持ち、モデルの管理や API サーバーなどを使いやすい形で提供します。
+本書では、推論の基盤に llama.cpp [^llama-cpp] を採用します。llama.cpp は、LLM モデルの重みを読み込んで推論（テキスト生成）を実行するエンジンで、C++ で実装されています。ビルド設定や起動オプションを直接制御できますが、筆者はオプションをあまり理解していません。
 
-Unsloth Desktop は、モデルの実行と学習を GUI から扱い、OpenAI 互換 API やエージェントとの接続も提供するデスクトップアプリです。公式サイトでは Windows、macOS、Linux に対応しています。[^unsloth-desktop] 筆者は Radeon 検証機で動作を確認し、自分でビルドした llama.cpp の動作確認にも利用しています。推論、モデル管理、エージェント連携をひとつの画面で扱える選択肢です。
+実際の推論アプリケーションとして、Ollama [^ollama] 、LM Studio [^lmstudio] 、Unsloth Desktop [^unsloth-desktop] も利用します。これらは llama.cpp を内包し、モデルの管理や API サーバーを使いやすい形で提供します。Ollama は CLI での継続的な運用に、LM Studio と Unsloth Desktop は GUI でのモデル探索と実験に向いています。
 
-| ツール | 向いている用途 | 本書での位置づけ |
-| :-- | :-- | :-- |
-| <span class="nowrap">LM Studio</span> | GUI でモデルを探し、設定を変えながら試す | 初期検証と <span class="nowrap">NVIDIA</span> のマルチ GPU 検証 |
-| <span class="nowrap">Unsloth Desktop</span> | GUI でモデルを実行・学習し、エージェントへ接続する | <span class="nowrap">Radeon</span> と自作ビルドした <span class="nowrap">llama.cpp</span> の動作確認 |
-| <span class="nowrap">Ollama</span> | CLI と API でモデルを継続運用する | Radeon 検証機の推論サーバー |
-| <span class="nowrap">llama.cpp</span> | バックエンドやビルド設定まで制御する | <span class="nowrap">Windows</span> 向けビルドと問題の切り分け |
+[^llama-cpp]: https://llama-cpp.com/
+[^ollama]: https://ollama.com/
+[^lmstudio]: https://lmstudio.ai/
+[^unsloth-desktop]: https://www.unsloth.ai/
 
-[^unsloth-desktop]: [Unsloth Desktop 公式サイト](https://www.unsloth.ai/)
-
-これらは OpenAI 互換 API を提供できます。推論用 PC で API サーバーを起動し、開発用 Mac や別のクライアントから LAN 経由で利用できます。クライアント側はモデルを保持せず、Xcode やエージェントの処理に専念できます。
+これらアプリは OpenAI 互換 API を提供できます。推論用 PC で API サーバーを起動し、開発用 Mac や別のクライアントから LAN 経由で利用できます。クライアント側はモデルを保持せず、Xcode やエージェントの処理に専念できます。
 
 ## 本書で構築する環境
 
-本書の中心は、Windows 11 と Radeon GPU を搭載した自作 PC です。主な検証機は Radeon AI PRO R9700 32 GB を 2 枚、システムメモリを 128 GB 搭載します。GPU の価格と VRAM 容量を重視して Radeon を選びました。
+本書の主な検証機は、Windows 11 と Radeon GPU を搭載した自作 PC です。主な検証機は Radeon AI PRO R9700 32 GB を 2 枚、システムメモリを 128 GB 搭載します。GPU の価格と VRAM 容量を重視して Radeon を選びました。
 
 ただし、すべての検証を Radeon だけで行うわけではありません。CUDA 前提のソフトウェアとの差を知るため、GeForce RTX 5060 Ti 16 GB を使った構成も扱います。OCuLink の章では、同 GPU を 2 枚に増設した事例を取り上げます。
 
@@ -119,10 +119,10 @@ Windows 11 検証機
 
 第 5 章では、推論環境を LAN 内のサーバーとして Xcode へ接続します。第 6 章と第 7 章は、ComfyUI と MiniMax H3 を Radeon で動かし、ROCm 10 へ更新します。第 8 章で、ここまでに現れた問題を層ごとに切り分けます。
 
-元になった iOSDC 2026 原稿と検証機の記事は、公開版でも参照できます。[^iosdc-2026] [^qiita-local-llm]
+なお、元になった iOSDC Japan 2026 の原稿記事 [^iosdc-2026] 、検証機の記事 [^qiita-local-llm] は、公開版でも参照できます。
 
-[^iosdc-2026]: [自作 PC で始めるローカル LLM を利用した Xcode のコード自動生成](https://github.com/mitsuharu/iosdc-2026-pamphlet/blob/main/manuscripts/index.md)
-[^qiita-local-llm]: [ローカル LLM 素人が作るローカル LLM 検証機](https://qiita.com/mitsuharu_e/items/92a3eccb65d9b5c4ceca)
+[^iosdc-2026]: https://github.com/mitsuharu/iosdc-2026-pamphlet
+[^qiita-local-llm]: https://qiita.com/mitsuharu_e/items/92a3eccb65d9b5c4ceca
 
 ## まとめ
 

@@ -12,11 +12,11 @@ profile: |
 
 # OCuLink で GPU を増設する
 
-ローカル LLM では、GPU の演算性能だけでなく VRAM 容量が扱えるモデルの上限を決めます。16 GB の GPU に収まらないモデルを試すため、同じ GPU をもう 1 枚追加したくなりました。しかし、対象の PC は microATX の小型構成で、ケース内に 2 枚目を置く空間がありません。
+ローカル LLM では、GPU の演算性能だけでなく VRAM 容量が扱えるモデルの上限を決めます。16 GB の GPU に収まらないモデルを試すため、同じ GPU をもう 1 枚追加したくなりました。これは先述のメインの検証機ではありません、しかも対象の PC は microATX の小型構成で、ケース内に 2 枚目を置く空間がありません。
 
 そこで、PCIe を外部へ引き出す OCuLink を使い、GeForce RTX 5060 Ti 16 GB を増設しました。本章は NVIDIA GPU の事例です。Radeon 検証機とは異なりますが、外部 GPU の接続、PCIe 帯域、マルチ GPU の安定性を考える比較対象になります。元の作業記録もブログで公開しています。[^oculink-blog]
 
-[^oculink-blog]: [グラボを OCuLink で追加してみた](https://mthr.hatenablog.com/entry/2026/08/07/214317)
+[^oculink-blog]: https://mthr.hatenablog.com/entry/2026/08/07/214317
 
 ## OCuLink を選んだ理由
 
@@ -25,7 +25,7 @@ profile: |
 | パーツ | 構成 |
 | :-- | :-- |
 | CPU | <span class="nowrap">AMD Ryzen 7 7700</span> |
-| RAM | 32 GB |
+| RAM | <span class="nowrap">DDR5</span>　32 GB |
 | 既存 GPU | <span class="nowrap">GeForce RTX 5060 Ti</span> 16 GB |
 | マザーボード | <span class="nowrap">microATX</span>、<span class="nowrap">PCIe 4.0 x4</span> の空きあり |
 
