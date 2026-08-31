@@ -1,8 +1,8 @@
 const { getBookEntries } = require('../scripts/getArticleEntries.cts')
 
 module.exports = {
-  title: 'ゆめみより ' /*\'23'*/,
-  author: 'ゆめみより製作委員会',
+  title: 'Windows + Radeon で育てるローカル LLM 環境',
+  author: '江本光晴',
   language: 'ja',
   size: 'A5',
   theme: [
