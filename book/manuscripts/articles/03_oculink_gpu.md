@@ -28,7 +28,6 @@ profile: |
   <img class="link-card-thumbnail" src="./03_oculink_gpu/qiita.com.png" alt="qiita.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">ローカル LLM 素人が作るローカル LLM 検証機 - Qiita</div>
-    <div class="link-card-domain">qiita.com</div>
     <div class="link-card-url">https://qiita.com/mitsuharu_e/items/92a3eccb65d9b5c4ceca</div>
   </div>
 </div>
@@ -77,7 +76,6 @@ profile: |
   <img class="link-card-thumbnail" src="./03_oculink_gpu/www.amazon.co.jp.png" alt="www.amazon.co.jp のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">Amazon</div>
-    <div class="link-card-domain">www.amazon.co.jp</div>
     <div class="link-card-url">https://www.amazon.co.jp/dp/B0F4RP1QG2</div>
   </div>
 </div>
@@ -85,8 +83,6 @@ profile: |
 そういうことで、グラボをドックに組みました。
 
 ![RTX 5060 Ti 16GB on Minisforum DEG1](./03_oculink_gpu/20260807202226.jpg)
-
-*RTX 5060 Ti 16GB on Minisforum DEG1*
 
 いざ PC に接続すると、映像が出なかったり、グラボが認識されなかったりと不安定になりました。中古グラボということで、初期不良も考えましたが他の PC で映像出力できたので、問題は OcuLink の接続周りです。
 
@@ -107,13 +103,9 @@ DEG1 側も設定を変更しました。
 
 ![Minisforum DEG1 の裏蓋を開ける設定スイッチ](./03_oculink_gpu/20260807204933.jpg)
 
-*Minisforum DEG1 の裏蓋を開ける設定スイッチ*
-
 これらの設定により外部接続したグラボが認識されました。検証機は RTX 5060 Ti ２枚を利用できるようになりました。
 
 ![OcuLink 接続したグラボを認識した](./03_oculink_gpu/20260807205225.jpg)
-
-*OcuLink 接続したグラボを認識した*
 
 ## RTX 5060 Ti 16 GB ×2 で検証
 
@@ -122,8 +114,6 @@ DEG1 側も設定を変更しました。
 １枚だけで動かしていたときは遅いと感じていましたが、２枚構成にするとかなり快適になりました。単純に VRAM が 32 GB になったことで、扱えるモデルの幅が大きく広がります。
 
 ![LLM 推論](./03_oculink_gpu/20260807205257.jpg)
-
-*LLM 推論*
 
 ### LM Studio のマルチ GPU 制御
 

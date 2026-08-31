@@ -244,7 +244,8 @@ LLM にもっとも影響するパーツは GPU です。本来は他パーツ�
 
 [^qiita-local-llm-pc]: https://qiita.com/mitsuharu_e/items/92a3eccb65d9b5c4ceca
 
-**表：検証機の構成と計測結果**
+<figure class="column-top">
+<figcaption>検証機の構成と計測結果</figcaption>
 
 | 構成 | A | B | C | D | E |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -254,6 +255,8 @@ LLM にもっとも影響するパーツは GPU です。本来は他パーツ�
 | **計測結果** | (token/sec) | | | | |
 | gemma4 (9.6 GB) | 70.47 | 60.95 | 96.36 | 105.12 | 58.25 |
 | qwen3.6 (24 GB) | 32.86 | 20.85 | 63.87 | 53.79 | 74.39 |
+
+</figure>
 
 
 ### 性能比較

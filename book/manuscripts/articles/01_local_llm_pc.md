@@ -26,7 +26,7 @@ profile: |
   <div class="link-card-body">
     <div class="link-card-title">Mitsuharu Emoto（@mitsuharu_e）の投稿 / X</div>
     <div class="link-card-text">ということで、今の検証機はこういう構成になった</div>
-    <img class="link-card-media" src="./01_local_llm_pc/x-post-2068555740013527394.webp" alt="2枚のRadeon GPUを搭載したローカルLLM検証機">
+    <img class="link-card-media" src="./01_local_llm_pc/x-post-2068555740013527394.jpg" alt="2枚のRadeon GPUを搭載したローカルLLM検証機">
     <div class="link-card-url">https://x.com/mitsuharu_e/status/2068555740013527394</div>
   </div>
 </div>
@@ -35,7 +35,7 @@ profile: |
   <div class="link-card-body">
     <div class="link-card-title">Mitsuharu Emoto（@mitsuharu_e）の投稿 / X</div>
     <div class="link-card-text">iOSアプリ作りを推論中</div>
-    <img class="link-card-media" src="./01_local_llm_pc/x-post-2073625317911179567.webp" alt="ローカルLLMでiOSアプリを生成している動画のサムネイル">
+    <img class="link-card-media" src="./01_local_llm_pc/x-post-2073625317911179567.jpg" alt="ローカルLLMでiOSアプリを生成している動画のサムネイル">
     <div class="link-card-url">https://x.com/mitsuharu_e/status/2073625317911179567</div>
   </div>
 </div>
@@ -52,7 +52,6 @@ profile: |
   <img class="link-card-thumbnail" src="./01_local_llm_pc/ollama.com.png" alt="ollama.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">Ollama のモデル・ライブラリ</div>
-    <div class="link-card-domain">ollama.com</div>
     <div class="link-card-url">https://ollama.com/library/qwen3.6</div>
   </div>
 </div>
@@ -61,7 +60,6 @@ profile: |
   <img class="link-card-thumbnail" src="./01_local_llm_pc/ollama.com.png" alt="ollama.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">Ollama のモデル・ライブラリ</div>
-    <div class="link-card-domain">ollama.com</div>
     <div class="link-card-url">https://ollama.com/library/gemma4</div>
   </div>
 </div>
@@ -72,7 +70,6 @@ profile: |
   <img class="link-card-thumbnail" src="./01_local_llm_pc/ollama.com.png" alt="ollama.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">Ollama のモデル・ライブラリ</div>
-    <div class="link-card-domain">ollama.com</div>
     <div class="link-card-url">https://ollama.com/library/qwen3-coder-next</div>
   </div>
 </div>
@@ -97,7 +94,6 @@ OS は Windows 11 です。後述しますが、AMD のグラボを利用しま�
   <img class="link-card-thumbnail" src="./01_local_llm_pc/ollama.com.png" alt="ollama.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">Ollama のモデル・ライブラリ</div>
-    <div class="link-card-domain">ollama.com</div>
     <div class="link-card-url">https://ollama.com/</div>
   </div>
 </div>
@@ -106,7 +102,6 @@ OS は Windows 11 です。後述しますが、AMD のグラボを利用しま�
   <img class="link-card-thumbnail" src="./01_local_llm_pc/lmstudio.ai.png" alt="lmstudio.ai のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">LM Studio</div>
-    <div class="link-card-domain">lmstudio.ai</div>
     <div class="link-card-url">https://lmstudio.ai/</div>
   </div>
 </div>
@@ -121,7 +116,6 @@ OS は Windows 11 です。後述しますが、AMD のグラボを利用しま�
   <img class="link-card-thumbnail" src="./01_local_llm_pc/www.intel.co.jp.png" alt="www.intel.co.jp のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">インテル Core i5-14400 プロセッサーの仕様</div>
-    <div class="link-card-domain">www.intel.co.jp</div>
     <div class="link-card-url">https://www.intel.co.jp/content/www/jp/ja/products/sku/236788/intel-core-i5-processor-14400-20m-cache-up-to-4-70-ghz/specifications.html</div>
   </div>
 </div>
@@ -134,7 +128,6 @@ OS は Windows 11 です。後述しますが、AMD のグラボを利用しま�
   <img class="link-card-thumbnail" src="./01_local_llm_pc/www.dospara.co.jp.png" alt="www.dospara.co.jp のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">ドスパラの商品ページ</div>
-    <div class="link-card-domain">www.dospara.co.jp</div>
     <div class="link-card-url">https://www.dospara.co.jp/SBR1968/IC583089.html</div>
   </div>
 </div>
@@ -169,7 +162,6 @@ OS は Windows 11 です。後述しますが、AMD のグラボを利用しま�
   <img class="link-card-thumbnail" src="./01_local_llm_pc/www.dospara.co.jp.png" alt="www.dospara.co.jp のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">ドスパラの商品ページ</div>
-    <div class="link-card-domain">www.dospara.co.jp</div>
     <div class="link-card-url">https://www.dospara.co.jp/SBR1798</div>
   </div>
 </div>
@@ -186,7 +178,6 @@ OS は Windows 11 です。後述しますが、AMD のグラボを利用しま�
   <img class="link-card-thumbnail" src="./01_local_llm_pc/www.goppa.jp.png" alt="www.goppa.jp のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">XFX Radeon AI PRO R9700</div>
-    <div class="link-card-domain">www.goppa.jp</div>
     <div class="link-card-url">https://www.goppa.jp/xfxforce/shop/rx-97xproaiy/</div>
   </div>
 </div>
@@ -225,7 +216,6 @@ Mac 以外にも、Windows や Linux 向けにユニファイドメモリを搭�
   <img class="link-card-thumbnail" src="./01_local_llm_pc/www.dospara.co.jp.png" alt="www.dospara.co.jp のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">ドスパラの商品ページ</div>
-    <div class="link-card-domain">www.dospara.co.jp</div>
     <div class="link-card-url">https://www.dospara.co.jp/SBR83/IC594774.html</div>
   </div>
 </div>
@@ -252,7 +242,6 @@ Mac 以外にも、Windows や Linux 向けにユニファイドメモリを搭�
   <img class="link-card-thumbnail" src="./01_local_llm_pc/www.links.co.jp.png" alt="www.links.co.jp のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">Okinos Air Cross</div>
-    <div class="link-card-domain">www.links.co.jp</div>
     <div class="link-card-url">https://www.links.co.jp/item/okinos-air-cross/</div>
   </div>
 </div>

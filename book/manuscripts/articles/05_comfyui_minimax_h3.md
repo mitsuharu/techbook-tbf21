@@ -26,7 +26,6 @@ profile: |
   <img class="link-card-thumbnail" src="./05_comfyui_minimax_h3/huggingface.co.png" alt="huggingface.co のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">MiniMaxAI/MiniMax-H3 · Hugging Face</div>
-    <div class="link-card-domain">huggingface.co</div>
     <div class="link-card-url">https://huggingface.co/MiniMaxAI/MiniMax-H3</div>
   </div>
 </div>
@@ -37,7 +36,6 @@ profile: |
   <img class="link-card-thumbnail" src="./05_comfyui_minimax_h3/comfy.org.png" alt="comfy.org のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">Comfy - Professional Control of Visual AI</div>
-    <div class="link-card-domain">comfy.org</div>
     <div class="link-card-url">https://comfy.org/</div>
   </div>
 </div>
@@ -50,11 +48,14 @@ profile: |
 
 すでに MiniMax H3 に対応したテンプレートがあり、そのワークフローを選択します。そして、モデルをダウンロードして、Run ボタンを押したら動画が生成されました。簡単でした。
 
-> ComfyUI + MiniMax H3のデフォルトのワークフローでプロンプトだけ変更した。RAM 32 GB / RTX 4070 Ti 12 GB で864x480の8秒で約7分で生成できた [pic.twitter.com/2STt6sofHK](https://t.co/2STt6sofHK)
->
-> — Mitsuharu Emoto (@mitsuharu_e) [2026年8月10日](https://x.com/mitsuharu_e/status/2086787701039305127?ref_src=twsrc%5Etfw)
->
-> URL：https://x.com/mitsuharu_e/status/2086787701039305127
+<div class="link-card x-post-card">
+  <div class="link-card-body">
+    <div class="link-card-title">Mitsuharu Emoto（@mitsuharu_e）の投稿 / X</div>
+    <div class="link-card-text">ComfyUI + MiniMax H3のデフォルトのワークフローでプロンプトだけ変更した。RAM 32 GB / RTX 4070 Ti 12 GB で864x480の8秒で約7分で生成できた</div>
+    <img class="link-card-media" src="./05_comfyui_minimax_h3/x-post-2086787701039305127.jpg" alt="ComfyUIとMiniMax H3で生成した動画のサムネイル">
+    <div class="link-card-url">https://x.com/mitsuharu_e/status/2086787701039305127</div>
+  </div>
+</div>
 
 ## Radeon だと ComfyUI をインストールに手こずる
 
@@ -79,7 +80,6 @@ ComfyUI 自体が AMD 非対応というわけではなく、公式インスト�
   <img class="link-card-thumbnail" src="./05_comfyui_minimax_h3/github.com.png" alt="github.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">GitHub - Comfy-Org/ComfyUI: The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.</div>
-    <div class="link-card-domain">github.com</div>
     <div class="link-card-url">https://github.com/comfy-org/comfyui</div>
   </div>
 </div>
@@ -140,7 +140,6 @@ MiniMax H3 は公式スキルを公開しているので、このスキルの存
   <img class="link-card-thumbnail" src="./05_comfyui_minimax_h3/github.com.png" alt="github.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">MiniMax-H3/skills at main · MiniMax-AI/MiniMax-H3</div>
-    <div class="link-card-domain">github.com</div>
     <div class="link-card-url">https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills</div>
   </div>
 </div>
@@ -176,7 +175,6 @@ GeForceなら意識する必要すらなかった手順が、Radeon では１つ
   <img class="link-card-thumbnail" src="./05_comfyui_minimax_h3/github.com.png" alt="github.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">GitHub - mitsuharu/ComfyUI-ROCm: Windows11 + Radeon 環境で Claude Code を利用して ComfyUI + MiniMax H3 を動かす</div>
-    <div class="link-card-domain">github.com</div>
     <div class="link-card-url">https://github.com/mitsuharu/ComfyUI-ROCm</div>
   </div>
 </div>

@@ -115,10 +115,29 @@
     width: 100%;
 }
 
-.link-card-domain {
-    color: #526474;
-    font-size: 0.78rem;
-    margin-block-start: 0.2rem;
+.x-post-media-grid {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-block-start: 0.55rem;
+}
+
+.x-post-media-grid .link-card-media {
+    margin-block-start: 0;
+}
+
+.column-top {
+    break-inside: avoid;
+    margin-block: 1rem;
+}
+
+.column-top figcaption {
+    color: #40556a;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-block: 0.35rem;
+    text-align: center;
 }
 
 .link-card-url {

@@ -26,7 +26,6 @@ profile: |
   <img class="link-card-thumbnail" src="./04_llama_cpp_windows/qiita.com.png" alt="qiita.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">ローカル LLM 素人が作るローカル LLM 検証機 - Qiita</div>
-    <div class="link-card-domain">qiita.com</div>
     <div class="link-card-url">https://qiita.com/mitsuharu_e/items/92a3eccb65d9b5c4ceca</div>
   </div>
 </div>
@@ -34,8 +33,6 @@ profile: |
 私は日常的に Ollama を採用して、LLM 推論を行なっています。個人的には、リッチな UI を持つ LM Studio なども併用したいところですが、この検証機では Ollama **だけ**を利用しています。なぜかというと、この検証機では必ずクラッシュするからです。LM Studio などは他の検証機でも利用していますが、複数の Radeon GPU がある環境では推論が失敗しました。
 
 ![推論過程で文字化けして止まる](./04_llama_cpp_windows/20260825132416.png)
-
-*推論過程で文字化けして止まる*
 
 この例は Ollama ではないです。他の推論アプリで、このように文字化けして、推論が正しく動きません。文字化けならまだマシな方で、モデルを VRAM にマウントする途中で PC がクラッシュすることもあります。マウントしたグラボが動作無効の扱いになり、デバイスマネージャーから再有効する日々でした。
 
@@ -45,7 +42,6 @@ profile: |
   <img class="link-card-thumbnail" src="./04_llama_cpp_windows/mthr.hatenablog.com.png" alt="mthr.hatenablog.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">グラボを OCuLink で追加してみた - ブログ</div>
-    <div class="link-card-domain">mthr.hatenablog.com</div>
     <div class="link-card-url">https://mthr.hatenablog.com/entry/2026/08/07/214317</div>
   </div>
 </div>
@@ -54,11 +50,13 @@ profile: |
 
 そこで、いろいろ調査していました。そのとき、ビルドオプションや ROCm の設定周りが影響してるのではと、アドバイスをいただきました。それを起点に調査と実装したところ、問題は解決しました（主に行なったのは Codex ですが）。
 
-> おそらく Unsloth Studioのllama.cppはGGML CUDA NO PEER COPY=OFFでビルドされてる Ollamaのllama.cppはこの設定をONでビルドしている あとUnslothStudioの中のROCmなんだけど7.14らしいから 自身で入れているROCmがそれより古いとドライバーとRCCLの不整合でおかしな挙動するかも
->
-> — CopenDeCamp (@CopenDeCamp) [2026年8月20日](https://x.com/CopenDeCamp/status/2090368867151618180?ref_src=twsrc%5Etfw)
->
-> URL：https://x.com/CopenDeCamp/status/2090368867151618180
+<div class="link-card x-post-card">
+  <div class="link-card-body">
+    <div class="link-card-title">CopenDeCamp（@CopenDeCamp）の投稿 / X</div>
+    <div class="link-card-text">おそらく Unsloth Studioのllama.cppはGGML CUDA NO PEER COPY=OFFでビルドされてる Ollamaのllama.cppはこの設定をONでビルドしている あとUnslothStudioの中のROCmなんだけど7.14らしいから 自身で入れているROCmがそれより古いとドライバーとRCCLの不整合でおかしな挙動するかも</div>
+    <div class="link-card-url">https://x.com/CopenDeCamp/status/2090368867151618180</div>
+  </div>
+</div>
 
 そんなわけで、Windows + マルチ Radeon GPU 向けの llama.cpp をビルドするリポジトリを公開しました。同環境で悩む人がいれば、これで対応できます（できるはずです）。
 
@@ -66,7 +64,6 @@ profile: |
   <img class="link-card-thumbnail" src="./04_llama_cpp_windows/github.com.png" alt="github.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">GitHub - mitsuharu/llama.cpp-windows-gpu-builder: 主に Windows + マルチ Radeon GPU 環境向けに llama.cpp をビルドする</div>
-    <div class="link-card-domain">github.com</div>
     <div class="link-card-url">https://github.com/mitsuharu/llama.cpp-windows-gpu-builder</div>
   </div>
 </div>
@@ -105,7 +102,6 @@ if(GGML_HIP AND OLLAMA_RUNNER_DIR MATCHES "^rocm_v")
   <img class="link-card-thumbnail" src="./04_llama_cpp_windows/github.com.png" alt="github.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">ollama/llama/server/CMakeLists.txt at v0.32.15 · ollama/ollama</div>
-    <div class="link-card-domain">github.com</div>
     <div class="link-card-url">https://github.com/ollama/ollama/blob/v0.32.15/llama/server/CMakeLists.txt#L99</div>
   </div>
 </div>
@@ -118,7 +114,6 @@ llama.cpp は、その GitHub リポジトリにて Windows + ROCm 向けのビ�
   <img class="link-card-thumbnail" src="./04_llama_cpp_windows/github.com.png" alt="github.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">GitHub - ggml-org/llama.cpp: LLM inference in C/C++</div>
-    <div class="link-card-domain">github.com</div>
     <div class="link-card-url">https://github.com/ggml-org/llama.cpp</div>
   </div>
 </div>
@@ -129,7 +124,6 @@ llama.cpp は、その GitHub リポジトリにて Windows + ROCm 向けのビ�
   <img class="link-card-thumbnail" src="./04_llama_cpp_windows/github.com.png" alt="github.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">llama.cpp on Windows with AMD ROCm (HIP) — Installation Guide · ggml-org llama.cpp · Discussion #27047</div>
-    <div class="link-card-domain">github.com</div>
     <div class="link-card-url">https://github.com/ggml-org/llama.cpp/discussions/27047</div>
   </div>
 </div>
@@ -152,7 +146,6 @@ llama.cpp は、その GitHub リポジトリにて Windows + ROCm 向けのビ�
   <img class="link-card-thumbnail" src="./04_llama_cpp_windows/www.amd.com.png" alt="www.amd.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">AMD Software: Adrenalin Edition™ アプリケーション</div>
-    <div class="link-card-domain">www.amd.com</div>
     <div class="link-card-url">https://www.amd.com/ja/products/software/adrenalin.html</div>
   </div>
 </div>
@@ -183,11 +176,14 @@ GitHub Actions のワークフローから、バックエンドの種類と llam
 
 今年8月、Unsloth からデスクトップ向けのアプリ Unsloth Desktop がリリースされました。
 
-> Introducing Unsloth Desktop 🦥 The first desktop app to run and train models locally. • Open-source. Runs on Mac, Windows and Linux • Supports MLX, diffusion image/video, audio, GGUF • Connect Claude Code and Codex to local LLMs • 50% more accurate, self-healing tool calls +… [pic.twitter.com/vjTFB1e5IQ](https://t.co/vjTFB1e5IQ)
->
-> — Unsloth AI (@UnslothAI) [2026年8月11日](https://x.com/UnslothAI/status/2087177146662072546?ref_src=twsrc%5Etfw)
->
-> URL：https://x.com/UnslothAI/status/2087177146662072546
+<div class="link-card x-post-card">
+  <div class="link-card-body">
+    <div class="link-card-title">Unsloth AI（@UnslothAI）の投稿 / X</div>
+    <div class="link-card-text">Introducing Unsloth Desktop 🦥 The first desktop app to run and train models locally. • Open-source. Runs on Mac, Windows and Linux • Supports MLX, diffusion image/video, audio, GGUF • Connect Claude Code and Codex to local LLMs • 50% more accurate, self-healing tool calls +…</div>
+    <img class="link-card-media" src="./04_llama_cpp_windows/x-post-2087177146662072546.png" alt="Unsloth Desktopを紹介する動画のサムネイル">
+    <div class="link-card-url">https://x.com/UnslothAI/status/2087177146662072546</div>
+  </div>
+</div>
 
 LM Studio は Bionic として、エージェント向けにシフトしたので、今は Unsloth Desktop を利用しています。LM Studio は従来アプリも更新されているので、Bionic と従来アプリの関係性がよく分からない。
 
@@ -195,7 +191,6 @@ LM Studio は Bionic として、エージェント向けにシフトしたの�
   <img class="link-card-thumbnail" src="./04_llama_cpp_windows/lmstudio.ai.png" alt="lmstudio.ai のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">LM Studio Bionic - Your Agent for Work and Code</div>
-    <div class="link-card-domain">lmstudio.ai</div>
     <div class="link-card-url">https://lmstudio.ai/</div>
   </div>
 </div>
@@ -204,13 +199,9 @@ LM Studio は Bionic として、エージェント向けにシフトしたの�
 
 ![Unsloth Desktop でカスタム llama.cpp を指定する](./04_llama_cpp_windows/20260825132413.png)
 
-*Unsloth Desktop でカスタム llama.cpp を指定する*
-
 私がビルドした llama.cpp のディレクトリを指定して、LLM 推論を行いました。結果は無事に推論することができました。
 
 ![マルチ Radeon GPU 環境で LLM 推論が成功する](./04_llama_cpp_windows/20260825132420.png)
-
-*マルチ Radeon GPU 環境で LLM 推論が成功する*
 
 これで、マルチ Radeon GPU でも自由に LLM 推論ができます！まあ、ほぼほぼ現行 Ollama が提供しているランタイムの真似やクローンでもあるんですが、自身で管理できるというメリットが大きいです。
 
@@ -234,7 +225,6 @@ LM Studio は Bionic として、エージェント向けにシフトしたの�
   <img class="link-card-thumbnail" src="./04_llama_cpp_windows/github.com.png" alt="github.com のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">GitHub - mitsuharu/llama.cpp-windows-gpu-builder: 主に Windows + マルチ Radeon GPU 環境向けに llama.cpp をビルドする</div>
-    <div class="link-card-domain">github.com</div>
     <div class="link-card-url">https://github.com/mitsuharu/llama.cpp-windows-gpu-builder</div>
   </div>
 </div>
