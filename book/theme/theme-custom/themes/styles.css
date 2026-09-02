@@ -147,3 +147,83 @@
     margin-block-start: 0.15rem;
     overflow-wrap: anywhere;
 }
+
+/**
+ 一問一答形式の Q&A
+
+ `.qa-question` と `.qa-answer` の中では `markdown="1"` を指定すると
+ Markdown の段落、リスト、コードブロックを利用できる。
+ */
+.qa-item {
+    margin-block: 1.75rem;
+}
+
+.qa-question,
+.qa-answer {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: 1.8rem minmax(0, 1fr);
+    padding: 0.85rem 1rem;
+}
+
+.qa-question {
+    background: #eeeeee;
+    border-block-start: 2px solid var(--mt-chapter-title-decoration-color, #333);
+    border-inline: 1px solid #b8b8b8;
+    font-weight: 700;
+    break-after: avoid;
+}
+
+.qa-answer {
+    border: 1px solid #b8b8b8;
+    border-block-start: 0;
+    break-before: avoid;
+}
+
+.qa-question::before,
+.qa-answer::before {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    grid-column: 1;
+    grid-row: 1;
+    height: 1.8rem;
+    justify-content: center;
+    line-height: 1;
+    width: 1.8rem;
+}
+
+.qa-question > *,
+.qa-answer > * {
+    grid-column: 2;
+}
+
+.qa-question::before {
+    background: var(--mt-chapter-title-decoration-color, #333);
+    color: #fff;
+    content: 'Q';
+}
+
+.qa-answer::before {
+    border: 1px solid var(--mt-chapter-title-decoration-color, #333);
+    color: var(--mt-chapter-title-decoration-color, #333);
+    content: 'A';
+}
+
+.qa-question > :first-child,
+.qa-answer > :first-child {
+    margin-block-start: 0;
+}
+
+.qa-question > :last-child,
+.qa-answer > :last-child {
+    margin-block-end: 0;
+}
+
+.qa-question > :only-child,
+.qa-answer > :only-child {
+    align-self: center;
+}
