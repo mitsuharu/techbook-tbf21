@@ -106,6 +106,34 @@ profile: |
 - another_chapter.md
 ```
 
+### 書き下ろし記事と Q&A の表示
+
+書き下ろし記事は、記事冒頭の掲載情報に`publication-note`を使って明示します。
+
+```html
+<aside class="publication-note">
+  <div class="publication-note-label">Information</div>
+  <div class="publication-note-text">本記事は書き下ろしです。</div>
+</aside>
+```
+
+一問一答は、質問と回答を`qa-item`で囲みます。`markdown="1"`を指定した要素の内側では、段落、リスト、コードブロックなどの Markdown をそのまま利用できます。
+
+```html
+<section class="qa-item">
+<div class="qa-question" markdown="1">
+
+ローカル LLM は、最初からマルチ GPU にするべきですか？
+
+</div>
+<div class="qa-answer" markdown="1">
+
+いいえ。まずは GPU 1 枚で動く最小構成を作り、必要に応じて増設します。
+
+</div>
+</section>
+```
+
 ## 編集作業向けの自動生成ファイル
 
 次のファイルが自動生成対象です。これらは編集者が対象であり、執筆者は対応不要です。
