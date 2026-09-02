@@ -19,6 +19,10 @@
 /**
  書名の副題
  */
+h1:has(+ .book-subtitle) {
+    font-size: 2em;
+}
+
 .book-subtitle {
     font-size: 1.1rem;
     font-weight: 500;

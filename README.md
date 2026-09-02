@@ -1,6 +1,6 @@
-# 自作 PC で始めるローカル LLM
+# ローカル LLM 素人によるローカル LLM 入門
 
-**Windows + Radeon を中心とした検証環境の構築**
+**自作 PC で始める Windows + Radeon を中心とした検証環境の構築**
 
 Windows と自作 PC を使ったローカル LLM 検証環境について、Qiita、mthr blog、iOSDC Japan 2026 パンフレット向けに公開した記事を時系列で収録する技術同人誌です。
 
