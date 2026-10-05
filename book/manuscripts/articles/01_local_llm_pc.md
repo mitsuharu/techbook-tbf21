@@ -162,7 +162,7 @@ OS は Windows 11 です。後述しますが、AMD のグラボを利用しま�
   <img class="link-card-thumbnail" src="./01_local_llm_pc/www.dospara.co.jp.png" alt="www.dospara.co.jp のサムネイル">
   <div class="link-card-body">
     <div class="link-card-title">ドスパラの商品ページ</div>
-    <div class="link-card-url">https://www.dospara.co.jp/SBR1798</div>
+    <div class="link-card-url">https://www.dospara.co.jp/SBR1798/IC492115.html</div>
   </div>
 </div>
 
