@@ -6,7 +6,7 @@
 
 筆者が 2026 年に Qiita、mthr blog、iOSDC Japan 2026 パンフレット向けリポジトリで公開した記事を、初出日の時系列で収録する。書籍向けに章を再構成せず、公開時点の本文、検証結果、表記を記録として残す。
 
-媒体固有の表示は紙と電子版の両方で理解できる形へ置き換える。各記事の冒頭に初出日、掲載媒体、掲載元 URL を示し、Web の埋め込みカードはローカルのサムネイル、タイトル、ドメイン、完全な URL を持つリンクカードとして組版する。記事画像は各 Markdown ファイルと同名のフォルダーへ保存する。
+媒体固有の表示は紙と電子版の両方で理解できる形へ置き換える。各記事の冒頭に初出日、掲載媒体、掲載元 URL を示し、Web の埋め込みカードはローカルのサムネイル、タイトル、完全な URL を持つリンクカードとして組版する。記事画像は各 Markdown ファイルと同名のフォルダーへ保存する。
 
 ## 掲載順
 
@@ -18,6 +18,7 @@
 | 4 | 2026 年 8 月 25 日 | `04_llama_cpp_windows.md` | mthr blog「Windows + マルチ Radeon GPU 向けに llama.cpp をビルドする」 |
 | 5 | 2026 年 8 月 26 日 | `05_comfyui_minimax_h3.md` | mthr blog「Windows + Radeon GPU 環境で Claude Code と ComfyUI + MiniMax H3 を利用して動画を生成する」 |
 | 6 | 2026 年 8 月 31 日 | `06_rocm10.md` | mthr blog「llama.cpp と ComfyUI の環境を ROCm 10 に更新した」 |
+| 7 | 2026 年 10 月 4 日 | `07_n100_ryzen_llm.md` | [mthr blog「低スペック環境におけるローカル LLM の推論速度 / Intel N100 v.s. Ryzen 7 7700」](https://mthr.hatenablog.com/entry/2026/10/04/163705) |
 
 ## 転載の方針
 
