@@ -67,6 +67,14 @@ book/manuscripts/
 
 ### 記事の追加
 
+既存のブログ・Qiita・GitHub 原稿を転載する場合は、リポジトリに含まれる Codex スキル [techbook-import-article](.agents/skills/techbook-import-article/SKILL.md) を利用できます。このリポジトリを開いた Codex で、掲載元 URL を指定してください。
+
+```text
+$techbook-import-article この記事を本に追加して：https://掲載元の記事URL
+```
+
+スキルは本文の転記、画像の保存、リンク・X カードへの変換、掲載順の更新、PDF の確認までを扱います。
+
 1. [book/manuscripts/articles](book/manuscripts/articles) ディレクトリ内に、拡張子 `.md` の Markdown ファイルを作成します。
 2. PDF ビルド時に `articles/` ディレクトリ内の Markdown ファイルが自動的に検出されます。[book/vivliostyle.config.js](book/vivliostyle.config.js) を手動で編集する必要はありません。
 
