@@ -15,6 +15,7 @@ profile: |
 <aside class="publication-note">
   <div class="publication-note-label">Information</div>
   <div class="publication-note-text">これは 2026 年 8 月 25 日にブログで掲載しました。適宜、加筆修正しています。</div>
+  <div class="publication-note-text">【2026 年 10 月追記】llama.cpp のアップデートにより、私の Windows + マルチ Radeon GPU 環境では、従来必要だったビルドオプションの変更なしで推論できるようになりました。以前はクラッシュしていた LM Studio や Unsloth Desktop の同梱 llama.cpp でも、正常に動作することを確認しています。なお、本記事で紹介するビルド用リポジトリは、引き続き ROCm ランタイムの同梱や、新しい ROCm 10 系への対応に活用できます。</div>
   <div class="publication-note-url">掲載元：https://mthr.hatenablog.com/entry/2026/08/25/190317</div>
 </aside>
 
