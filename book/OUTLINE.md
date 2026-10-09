@@ -18,7 +18,7 @@
 | 4 | 2026 年 8 月 25 日 | `04_llama_cpp_windows.md` | mthr blog「Windows + マルチ Radeon GPU 向けに llama.cpp をビルドする」 |
 | 5 | 2026 年 8 月 26 日 | `05_comfyui_minimax_h3.md` | mthr blog「Windows + Radeon GPU 環境で Claude Code と ComfyUI + MiniMax H3 を利用して動画を生成する」 |
 | 6 | 2026 年 8 月 31 日 | `06_rocm10.md` | mthr blog「llama.cpp と ComfyUI の環境を ROCm 10 に更新した」 |
-| 7 | 2026 年 10 月 4 日 | `07_n100_ryzen_llm.md` | [mthr blog「低スペック環境におけるローカル LLM の推論速度 / Intel N100 v.s. Ryzen 7 7700」](https://mthr.hatenablog.com/entry/2026/10/04/163705) |
+| 7 | 2026 年 10 月 4 日 | `07_n100_ryzen_llm.md` | [mthr blog「低スペック環境におけるローカル LLM の推論速度 / Intel N100 v.s. Ryzen 7 7700」](https://mthr.hatenablog.com/entry/2026/10/04/163705) |\n| 8 | 2026 年 10 月 9 日 | `08_local_llm_apps.md` | [Qiita「ローカル LLM の実行アプリは何が違うか」](https://qiita.com/mitsuharu_e/items/f996104ba650a4e2c83c) |
 
 ## 転載の方針
 
