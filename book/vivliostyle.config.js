@@ -5,7 +5,7 @@ module.exports = {
   subtitle: '自作 PC で始める Windows + Radeon を中心とした検証環境の構築',
   author: '江本光晴',
   language: 'ja',
-  size: 'A5',
+  size: 'B5',
   theme: [
     '@vivliostyle/theme-base@2.1.1', // 大技林テーマが 3.0.0 に対応したら削除してください。
     '@vivliostyle/theme-techbook@2.0.2', // 大技林テーマが 3.0.0 に対応したら削除してください。
