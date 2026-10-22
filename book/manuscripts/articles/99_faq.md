@@ -176,6 +176,20 @@ Ollama も LM Studio も中身は llama.cpp ですが、同梱しているバー
 OS は Windows と Linux のどっちがいい？
 </div>
 <div class="qa-answer" markdown="1">
-慣れているほうで大丈夫です。私はゲームもするので Windows を使っています。Radeon の ROCm を本格的に使うなら、Linux のほうが相性はよいですが、Windows でも問題ないです。また、常時起動のサーバーにするなら、Windows より負荷が小さい Linux がお勧めです。私も N100 機は途中で Ubuntu に入れ替えました。
+慣れているほうで大丈夫です。私はゲームもするので Windows を使っています。Radeon の ROCm を本格的に使うなら、Linux のほうが相性はよいとされてますが、最近は Windows でも問題ないです。また、常時起動のサーバーにするなら、Windows より負荷が小さい Linux がお勧めです。私も N100 機は途中で Ubuntu に入れ替えました。
 </div>
 </section>
+
+<section class="qa-item">
+<div class="qa-question" markdown="1">
+AI のセキュリティ対策は？
+</div>
+<div class="qa-answer" markdown="1">
+AI を利用した開発が始まった当時は、AI の予期しない行動がありました。そのため、settings.local.json などで禁止事項をガチガチに固めていた時期がありました。いまは AI 自体が賢くなった、エージェントとして自由に動いて欲しいので、最近は定義してないですね。セキュアな案件だと意識することはあります。
+
+あと、AI がツールなどをインストールするので、[AikidoSec/safe-chain](https://github.com/AikidoSec/safe-chain) [^safe-chain] や [Takumi Guard](https://flatt.tech/takumi/features/guard) [^takumi-guard] といったセキュリティツールを実行環境にインストールして、確認してます。さらに、作成されたコードは GitHub の PR（Pull Request）を利用して、上記のセキュリティチェックを必ず通すようにしています。
+</div>
+</section>
+
+[^safe-chain]: AikidoSec/safe-chain, https://github.com/AikidoSec/safe-chain
+[^takumi-guard]: Takumi Guard, https://flatt.tech/takumi/features/guard
