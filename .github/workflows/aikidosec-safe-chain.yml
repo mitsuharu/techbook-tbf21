@@ -56,6 +56,11 @@ jobs:
         with:
           node-version-file: '.node-version'
 
+      # Yarn を公式 Action でセットアップ
+      - name: Setup Yarn
+        if: steps.changes.outputs.yarn == 'true'
+        uses: yarnpkg/setup-action@c9778d0717d1b46cf29f06ae5ae5ad41c1bb1c1a # main
+
       # AikidoSec Safe Chain をセットアップ
       - name: Install safe-chain
         run: |
@@ -72,7 +77,6 @@ jobs:
       - name: Install dependencies (yarn immutable)
         if: steps.changes.outputs.yarn == 'true'
         run: |
-          corepack enable || true
           yarn install --immutable
 
       # AikidoSec Safe Chain を実行 (pnpm)

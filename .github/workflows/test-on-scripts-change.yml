@@ -26,10 +26,13 @@ jobs:
         with:
           node-version-file: '.node-version'
 
+      # Yarn を公式 Action でセットアップ
+      - name: Setup Yarn
+        uses: yarnpkg/setup-action@c9778d0717d1b46cf29f06ae5ae5ad41c1bb1c1a # main
+
       # 依存関係をインストール
       - name: Install dependencies
         run: |
-          corepack enable
           yarn install --immutable
 
       # テストを実行
