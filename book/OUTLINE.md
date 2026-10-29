@@ -21,6 +21,8 @@
 | 7 | 2026 年 10 月 4 日 | `07_n100_ryzen_llm.md` | [mthr blog「低スペック環境におけるローカル LLM の推論速度 / Intel N100 v.s. Ryzen 7 7700」](https://mthr.hatenablog.com/entry/2026/10/04/163705) |
 | 8 | 2026 年 10 月 9 日 | `08_local_llm_apps.md` | [Qiita「ローカル LLM の実行アプリは何が違うか」](https://qiita.com/mitsuharu_e/items/f996104ba650a4e2c83c) |
 | 9 | 2026 年 10 月 18 日 | `09_hermes_agent.md` | [mthr blog「Hermes Agent の住処を N100 とラズパイに作る」](https://mthr.hatenablog.com/entry/2026/10/18/192710) |
+| 10 | 2026 年 10 月 28 日 | `10_local_llm_pc_second.md` | [ブログ「ローカル LLM 素人が作るローカル LLM 検証機（２台目）」](https://mthr.hatenablog.com/entry/2026/10/28/181140) |
+| 11 | 2026 年 10 月 29 日 | `11_local_llm_performance.md` | [ブログ「ローカル LLM 素人が作るローカル LLM 検証機（パフォーマンス比較編）」](https://mthr.hatenablog.com/entry/2026/10/29/180000) |
 
 ## 転載の方針
 
