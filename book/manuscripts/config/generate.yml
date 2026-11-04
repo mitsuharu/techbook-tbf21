@@ -26,8 +26,10 @@ edition_history: 2026年11月21日 初版
 # 奥付の行定義（label と value の組みの配列）
 # 行を自由に追加・変更・削除できます。
 colophon_rows:
-  - label: 発行
+  - label: 著者
     value: 江本光晴
+  - label: 製作
+    value: 余暇時間
   - label: 連絡先
     value: https://x.com/mitsuharu_e
 
