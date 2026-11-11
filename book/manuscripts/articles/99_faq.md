@@ -176,7 +176,9 @@ Ollama も LM Studio も中身は llama.cpp ですが、同梱しているバー
 OS は Windows と Linux のどっちがいい？
 </div>
 <div class="qa-answer" markdown="1">
-慣れているほうで大丈夫です。私はゲームもするので Windows を使っています。Radeon の ROCm を本格的に使うなら、Linux のほうが相性はよいとされてますが、最近は Windows でも問題ないです。また、常時起動のサーバーにするなら、Windows より負荷が小さい Linux がお勧めです。私も N100 機は途中で Ubuntu に入れ替えました。今後は LLM にしか使わないなら、Ubuntu で組みますね。
+慣れているほうで大丈夫です。私はゲームもするので Windows を使っています。Radeon の ROCm を本格的に使うなら、Linux のほうが相性はよいとされてますが、最近は Windows でも問題ないです。また、常時起動のサーバーにするなら、Windows より負荷が小さい Linux がお勧めです。
+
+私も N100 機は途中で Ubuntu に入れ替えました。今後は LLM にしか使わないなら、Ubuntu で組みますね。
 </div>
 </section>
 
@@ -187,7 +189,7 @@ AI のセキュリティ対策は？
 <div class="qa-answer" markdown="1">
 AI を利用した開発が始まった当時は、AI の予期しない行動がありました。そのため、settings.local.json などで禁止事項をガチガチに固めていた時期がありました。いまは AI 自体が賢くなった、エージェントとして自由に動いて欲しいので、最近は定義してないですね。セキュアな案件だと意識することはあります。
 
-あと、AI がツールなどをインストールするので、[AikidoSec/safe-chain](https://github.com/AikidoSec/safe-chain) [^safe-chain] や [Takumi Guard](https://flatt.tech/takumi/features/guard) [^takumi-guard] といったセキュリティツールを実行環境にインストールして、確認してます。さらに、作成されたコードは GitHub の PR（Pull Request）を利用して、上記のセキュリティチェックを必ず通すようにしています。
+あと、AI がツールなどをインストールするので、[AikidoSec/safe-chain](https://github.com/AikidoSec/safe-chain) [^safe-chain] や [Takumi Guard](https://flatt.tech/takumi/features/guard) [^takumi-guard] といったセキュリティツールを実行環境に導入して、確認してます。さらに、作成されたコードは GitHub の PR（Pull Request）を利用して、上記のセキュリティチェックを必ず通すようにしています。
 </div>
 </section>
 
@@ -199,11 +201,22 @@ AI を利用した開発が始まった当時は、AI の予期しない行動�
 いまローカル LLM を始めるのは時期が悪いのでは？
 </div>
 <div class="qa-answer" markdown="1">
-はい、時期は悪いです。今日が最安値が当分続くので、諦めましょう。少し前までは VRAM がないとスタートラインに立てない時期がありました。今でも VRAM は多ければ多いほどいんですが、最近は Strata など少ない VRAM でも、CPU や　RAM を使って動かす手段が登場しました。値段が高い VRAM をメモリでカバーするなど、求めるスペックは変わってきました。まあ、メモリも高いんですが。工夫や中古ショップ通いでなんとかなるかも、ならないかも。
+はい、時期は悪いです。今日が最安値が当分続くので、諦めましょう。少し前までは VRAM がないとスタートラインに立てない時期がありました。今でも VRAM は多ければ多いほどいんですが、最近は Strata など少ない VRAM でも、CPU や RAM を使って動かす手段が登場しました。値段が高い VRAM をメモリでカバーするなど、求めるスペックは変わってきました。
+
+まあ、メモリも高いんですが。工夫や中古ショップ通いでなんとかなるかも、ならないかも。
+</div>
+</section>
+
+<section class="qa-item">
+<div class="qa-question" markdown="1">
+副題に Windows と Radeon と書いてあるが？
+</div>
+<div class="qa-answer" markdown="1">
+はい、Windows も Radeon も使います。ただ、GPU で楽なのは Nvidia ですね...。Radeon の R9700 を所持して VRAM の余裕を得ましたが、Geforce の計算の速さと汎用性は魅力ですね。R9700 は Maya でより大きなモデルの実行にメインに利用していきます。
 </div>
 </section>
 
 <!-- markdownlint-disable MD041 -->
-<hr class="page-break" />
-　
+<!-- <hr class="page-break" />
+　 -->
 <!-- markdownlint-enable MD041 -->
