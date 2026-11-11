@@ -21,19 +21,17 @@ articles_toc: |
 #     2023年5月15日 初版
 #     2023年5月20日 初版 2刷
 #     2023年6月15日 第二版
-edition_history: 2026 年初版発行。
+edition_history: 2026年11月21日 初版
 
 # 奥付の行定義（label と value の組みの配列）
 # 行を自由に追加・変更・削除できます。
 colophon_rows:
-  - label: 発行
+  - label: 著者
     value: 江本光晴
-  - label: 表紙
-    value: ''
-  - label: 印刷
-    value: ''
+  - label: 製作
+    value: 余暇時間
   - label: 連絡先
-    value: https://github.com/mitsuharu
+    value: https://x.com/mitsuharu_e
 
 # コピーライト年（例: 2023）
 copyright_year: '2026'
