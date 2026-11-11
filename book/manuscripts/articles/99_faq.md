@@ -176,7 +176,7 @@ Ollama も LM Studio も中身は llama.cpp ですが、同梱しているバー
 OS は Windows と Linux のどっちがいい？
 </div>
 <div class="qa-answer" markdown="1">
-慣れているほうで大丈夫です。私はゲームもするので Windows を使っています。Radeon の ROCm を本格的に使うなら、Linux のほうが相性はよいとされてますが、最近は Windows でも問題ないです。また、常時起動のサーバーにするなら、Windows より負荷が小さい Linux がお勧めです。私も N100 機は途中で Ubuntu に入れ替えました。
+慣れているほうで大丈夫です。私はゲームもするので Windows を使っています。Radeon の ROCm を本格的に使うなら、Linux のほうが相性はよいとされてますが、最近は Windows でも問題ないです。また、常時起動のサーバーにするなら、Windows より負荷が小さい Linux がお勧めです。私も N100 機は途中で Ubuntu に入れ替えました。今後は LLM にしか使わないなら、Ubuntu で組みますね。
 </div>
 </section>
 
@@ -193,3 +193,17 @@ AI を利用した開発が始まった当時は、AI の予期しない行動�
 
 [^safe-chain]: AikidoSec/safe-chain, https://github.com/AikidoSec/safe-chain
 [^takumi-guard]: Takumi Guard, https://flatt.tech/takumi/features/guard
+
+<section class="qa-item">
+<div class="qa-question" markdown="1">
+いまローカル LLM を始めるのは時期が悪いのでは？
+</div>
+<div class="qa-answer" markdown="1">
+はい、時期は悪いです。今日が最安値が当分続くので、諦めましょう。少し前までは VRAM がないとスタートラインに立てない時期がありました。今でも VRAM は多ければ多いほどいんですが、最近は Strata など少ない VRAM でも、CPU や　RAM を使って動かす手段が登場しました。値段が高い VRAM をメモリでカバーするなど、求めるスペックは変わってきました。まあ、メモリも高いんですが。工夫や中古ショップ通いでなんとかなるかも、ならないかも。
+</div>
+</section>
+
+<!-- markdownlint-disable MD041 -->
+<hr class="page-break" />
+　
+<!-- markdownlint-enable MD041 -->
